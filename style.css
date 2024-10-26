@@ -1779,13 +1779,19 @@ h7{
 
     .footer{
         align-items: center;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
+        width: 100%;
     }
+
 
     .footer_list{
         font-size: 0.8em;
         gap: 20px;
         align-items: center;
+        margin-left: 0px;
+        margin-right: 3em;
     }
 
     h7{
@@ -1801,7 +1807,6 @@ h7{
         width: 100%;
         margin-bottom: 20px;
     }
-
 
     .nav{
         margin-top: 8px;
@@ -1932,7 +1937,7 @@ h7{
     }
 
     .workContainer{
-        gap: 60px;
+        gap: 76px;
     }
 
     
@@ -1949,7 +1954,7 @@ h7{
     
 
     .work{
-        margin-top: 2em;
+        margin-top: 3em;
         margin-bottom: 0px;
         width: 100vw;
     }
