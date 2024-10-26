@@ -1564,6 +1564,7 @@ h7{
         width: 20em;
         height: 2.9em;
         font-size: 14px;
+        border: none;
     }
 
     .teaImg, .accountImg, .influencerImg{
@@ -1744,8 +1745,8 @@ h7{
     }
 
     .last-email-container{
-        width: 78vw;
-        height: 200px;
+        width: 81vw;
+        height: 180px;
     }
 
     .email-downloadcv-container{
@@ -1755,7 +1756,7 @@ h7{
     }
 
     .textt{
-        font-size: 1.4em;
+        font-size: 1.2em;
         width: 13em;
         line-height: 128%;
         text-align: center;
@@ -1796,7 +1797,7 @@ h7{
 @media only screen and (max-width: 375px){
     .background {
         background: url("mobile_responsive.jpg") center/cover no-repeat;
-        height: 660px;
+        height: 670px;
         width: 100%;
         margin-bottom: 20px;
     }
@@ -1805,7 +1806,7 @@ h7{
     .nav{
         margin-top: 8px;
         gap: 30vw;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     .upper{
@@ -1922,7 +1923,7 @@ h7{
 
     .heroImage{
         background: url("mobile_hero.png") center/cover no-repeat;
-        margin-top: 0em;
+        margin-top: 1em;
         width: 82vw;
         height: 100%;
         min-height: 200px;
@@ -1948,7 +1949,7 @@ h7{
     
 
     .work{
-        margin-top: 0em;
+        margin-top: 2em;
         margin-bottom: 0px;
         width: 100vw;
     }
