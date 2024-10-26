@@ -1387,6 +1387,17 @@ h7{
         margin-bottom: 3.4em;
         align-items: center;
     }
+
+    .footer{
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1628,16 +1639,22 @@ h7{
         gap: 0em;
         margin-top: 3em;
         margin-bottom: 4em;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutDescription{
         gap: 2em;
         align-items: center;
+        justify-content: center;
+        margin-left: 4em;
+        margin-right: 4em;
     }
 
     .about-left{
         gap: 1.6em;
         justify-content: center;
+        align-items: center;
     }
 
     .aboutMe{
