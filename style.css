@@ -1954,7 +1954,14 @@ h7{
         align-items: center;
         justify-content: center;
     }
-
+    
+    .secondWork{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
 
     p{
         display: none;
