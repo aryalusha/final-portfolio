@@ -258,6 +258,14 @@ h2{
     align-self: stretch;
 }
 
+.secondWork{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch; 
+}
+
 .containerTea{
     display: flex;
     flex-direction: column;
@@ -870,6 +878,12 @@ h7{
       gap: 0.6em;
     }
 
+    .secondWork{
+        justify-content: center;
+        gap: 0.6em;
+    }
+    
+
     .line{
         width: 280px;
         display: none;
@@ -1468,6 +1482,14 @@ h7{
         padding-right: 15em;
     }
 
+    .secondWork{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
     h1 {
         font-size: 1.9em;
         height: auto;
@@ -1641,6 +1663,7 @@ h7{
         margin-bottom: 4em;
         justify-content: center;
         align-items: center;
+        width: 100vw;
     }
 
     .aboutDescription{
