@@ -16,7 +16,7 @@ body{
 }
 
 .background {
-    background: url("gradient2.png") center/cover no-repeat;
+    background: url("assets/gradient2.png") center/cover no-repeat;
     height: 930px;
     margin: 0;
 }
@@ -189,7 +189,7 @@ button:hover {
     width: 1068px;
     height: 524px;
     /* flex-shrink: 0; */
-    background: url("hero.png") center/cover no-repeat;
+    background: url("assets/hero.png") center/cover no-repeat;
 }
 
 .work{
@@ -286,7 +286,7 @@ h3{
     width: 451px;
     height: 21px;    
     align-items: center;
-    background: url("line.png") center/cover no-repeat;
+    background: url("assets/line.png") center/cover no-repeat;
     margin-bottom: 24px;
 }
 
@@ -300,15 +300,15 @@ h3{
 }
 
 .teaImg{
-    background-image: url('tea.jpg');
+    background-image: url('assets/tea.jpg');
 }
 
 .accountImg{
-    background-image: url('accounting.jpg');
+    background-image: url('assets/accounting.jpg');
 }
 
 .influencerImg{
-    background-image: url('influencer.jpg');
+    background-image: url('assets/influencer.jpg');
 }
 
 .teaText{
@@ -318,7 +318,7 @@ h3{
 }
 
 .right{
-    background: url("right.png") center/cover no-repeat;
+    background: url("assets/right.png") center/cover no-repeat;
     width: 24px;
     height: 24px;
 }
@@ -373,7 +373,7 @@ h4{
     width: 352px;
     align-self: stretch;
     justify-content: center;
-    
+
 }
 
 .aboutLeft{
@@ -407,14 +407,14 @@ h4{
 }
 
 .aboutMe{
-    background: url("me.png") center/cover no-repeat;
+    background: url("assets/me.png") center/cover no-repeat;
     width: 310.148px;
     height: 450px;
     border-radius: 15px;
 }
 
 .img{
-    background: url("about\ gradient.png") center/cover no-repeat;
+    background: url("assets/about\ gradient.png") center/cover no-repeat;
     height: 680px;
     width: 100%;
     display: flex;
@@ -449,7 +449,7 @@ h4{
 }
 
 .websiteDesign{
-    background: url("website\ &\ design.jpg") center/cover no-repeat;
+    background: url("assets/website\ &\ design.jpg") center/cover no-repeat;
     width: 300px;
     height: 360px;
     border-radius: 18px;
@@ -508,7 +508,7 @@ h6{
 }
 
 .softwareImg{
-    background: url("Software.jpg") center/cover no-repeat;
+    background: url("assets/Software.jpg") center/cover no-repeat;
     width: 489px;
     height: 147px;
     border-radius: 20px;
@@ -528,7 +528,7 @@ h6{
 }
 
 .webappImg{
-    background: url("webapp.jpg") center/cover no-repeat;
+    background: url("assets/webapp.jpg") center/cover no-repeat;
     width: 230px;
     height: 148px;
     border-radius: 20px;
@@ -552,7 +552,7 @@ h6{
 }
 
 .protoImg{
-    background: url("prototyping.jpg") center/cover no-repeat;
+    background: url("assets/prototyping.jpg") center/cover no-repeat;
     width: 310px;
     height: 166px;
     border-radius: 20px;
@@ -571,7 +571,7 @@ h6{
 }
 
 .flowImg{
-    background: url("userflow.jpg") center/cover no-repeat;
+    background: url("assets/userflow.jpg") center/cover no-repeat;
     width: 418px;
     height: 170px;
     border-radius: 20px;
@@ -597,7 +597,7 @@ h6{
 }
 
 .styleguideImg{
-    background: url("styleguide.jpg") center/cover no-repeat;
+    background: url("assets/styleguide.jpg") center/cover no-repeat;
     width: 428px;
     height: 142px;
     border-radius: 20px;
@@ -625,7 +625,7 @@ h6{
 }
 
 .brandingImg{
-    background: url("branding.jpg") center/cover no-repeat;
+    background: url("assets/branding.jpg") center/cover no-repeat;
     width: 298px;
     height: 148px;
     border-radius: 20px;
@@ -645,7 +645,7 @@ h6{
 }
 
 .interactiveImg{
-    background: url("interactive.jpg") center/cover no-repeat;
+    background: url("assets/interactive.jpg") center/cover no-repeat;
     width: 296px;
     height: 156px;
     border-radius: 20px;
@@ -676,7 +676,7 @@ h6{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("join.jpg");
+    background-image: url("assets/join.jpg");
     background-size: cover;
     border-radius: 22px;
     width: 1160px;
@@ -768,7 +768,7 @@ h7{
 @media (max-width: 1199px){
 
     .background {
-        background: url("responsive\ background.jpg") center/cover no-repeat;
+        background: url("assets/responsive\ background.jpg") center/cover no-repeat;
         height: 850px;
         width: 100%;
 
@@ -1013,7 +1013,7 @@ h7{
         padding: 30px 0px 0px 20px;
     }
     .websiteDesign{
-        background: url("tab-responsive.jpg") center/cover no-repeat;
+        background: url("assets/tab-responsive.jpg") center/cover no-repeat;
         width: 98%;
         height: 250px;
     }
@@ -1089,7 +1089,7 @@ h7{
 
 @media (max-width: 767px){
     .background {
-        background: url("responsive\ background.jpg") center/cover no-repeat;
+        background: url("assets/responsive\ background.jpg") center/cover no-repeat;
         height: 100vh;
         width: 100%;
         margin-bottom: 150px;
@@ -1328,7 +1328,7 @@ h7{
         padding: 30px 0px 0px 20px;
     }
     .websiteDesign{
-        background: url("tab-responsive.jpg") center/cover no-repeat;
+        background: url("assets/tab-responsive.jpg") center/cover no-repeat;
         width: 98%;
         height: 250px;
     }
@@ -1416,7 +1416,7 @@ h7{
 
 @media only screen and (max-width: 600px) {
     .background {
-        background: url("responsive\ mobile.jpg") center/cover no-repeat;
+        background: url("assets/responsive\ mobile.jpg") center/cover no-repeat;
         height: 700px;
         width: 100%;
         margin-bottom: 20px;
@@ -1670,8 +1670,7 @@ h7{
         gap: 2em;
         align-items: center;
         justify-content: center;
-        margin-left: 4em;
-        margin-right: 4em;
+        width: 100%;
     }
 
     .about-left{
@@ -1736,7 +1735,7 @@ h7{
         padding: 30px 0px 0px 20px;
     }
     .websiteDesign{
-        background: url("tab-responsive.jpg") center/cover no-repeat;
+        background: url("assets/tab-responsive.jpg") center/cover no-repeat;
         width: 95%;
         height: 250px;
     }
@@ -1842,7 +1841,7 @@ h7{
 
 @media only screen and (max-width: 375px){
     .background {
-        background: url("mobile_responsive.jpg") center/cover no-repeat;
+        background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
         height: 670px;
         width: 100%;
         margin-bottom: 20px;
@@ -1955,7 +1954,7 @@ h7{
         justify-content: center;
     }
     
-    .secondWork{
+        .secondWork{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
@@ -1974,7 +1973,7 @@ h7{
     }
 
     .heroImage{
-        background: url("mobile_hero.png") center/cover no-repeat;
+        background: url("assets/mobile_hero.png") center/cover no-repeat;
         margin-top: 1em;
         width: 82vw;
         height: 100%;
@@ -2098,6 +2097,7 @@ h7{
         gap: 2em;
         align-items: center;
         justify-content: center;
+
     }
 
     .about-left{
@@ -2106,7 +2106,7 @@ h7{
     }
 
     .aboutMe{
-        background: url("me_mobile_responsive.jpg") center/cover no-repeat;
+        background: url("assets/me_mobile_responsive.jpg") center/cover no-repeat;
         width: 80vw;
         height: 350px;
     }
@@ -2161,7 +2161,7 @@ h7{
         padding: 30px 0px 0px 20px;
     }
     .websiteDesign{
-        background: url("tab-responsive.jpg") center/cover no-repeat;
+        background: url("assets/tab-responsive.jpg") center/cover no-repeat;
         width: 95%;
         height: 140px;
     }
