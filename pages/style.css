@@ -483,6 +483,23 @@ h3{
 
 /* for Services page */
 
+
+.background1 {
+    background: url("../assets/servicesBg.png") center/cover no-repeat;
+    height: 450px;
+    margin: 0;
+    width: 100%;
+}
+
+.background1 .headingSec{
+    margin-top: 1.5em;
+}
+
+
+h1{
+    width: 500px;
+}
+
 .whole-container-why{
     display: flex;
     flex-direction: column;
@@ -1070,4 +1087,203 @@ h7{
         text-align: center;
     }
 
+}
+
+
+/* contact us/ */
+
+
+
+.header{
+    margin-top: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.header h1{
+    font-size: 3.4em;
+    height: 160px;
+}
+
+.header p{
+    font-size: 1.1em;
+    color:#71707c;
+}
+
+.contactContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin: 4em 0em 6em 0em;
+}
+
+.insideContact{
+    background-color: #1b1b1d;
+    width: 55vw;
+    height: 340px;
+    border-radius: 1.2em;
+    display: flex;
+    flex-direction: row;
+    padding: 80px;
+    gap: 4.2em;
+}
+
+.contactBox{
+    width: 50%;
+}
+
+.contactBox p{
+    font-size: 1.2em;
+    font-weight: 500;
+    color:#8d8c98;
+    line-height: 160%;
+}
+
+.contactBox .imageSize{
+    height: 24px;
+    width: 24px;
+}
+
+.PhoneEmail{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+}
+
+.contactBox h6{
+    font-size: 1.2em;
+    color: #c9cacf;
+    font-weight: 700;
+}
+
+
+.contactBox h7{
+    font-size: 1.2em;
+    color: #b4b5bd;
+    font-weight: 500;  
+}
+
+.allContact{
+    margin-top: 3em;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.form-container input[type="text"],.form-container input[type="email"],.form-container textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #e5e5e6;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-container textarea {
+    resize: none;
+    height: 80px;
+}
+
+.form-container button {
+    width: 105%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-container button:hover {
+    background-color: #135cba;
+    width: 105%;
+}
+
+.form-container p{
+    color:#8d8c98;;
+    margin-top: 1.2em;
+}
+
+@media (max-width: 1199px){
+    .insideContact{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    } 
+
+    .insideContact .contactBox{
+        width: 80%;
+        text-align: center;
+    }
+
+    .PhoneEmail{
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .header h1{
+        font-size: 3em;
+        height: 150px;
+    }
+
+
+    .header p{
+        font-size: 1em;
+        width: 80vw;
+        text-align: center;
+        line-height: 160%;
+    }
+
+    .insideContact .contactBox{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .header h1{
+        font-size: 2.3em;
+        height: 150px;
+        line-height: 120%;
+    }
+
+    .header p{
+        width: 60vw;
+        font-size: 0.9em;
+    }
+
+    .insideContact{
+        width: 100%;
+        padding: 50px;
+    }
+
+    .contactBox p{
+        font-size: 1em;
+    }
+
+    .footer h7{
+        margin-top: 0.8em;
+    }
+
+    
 }
