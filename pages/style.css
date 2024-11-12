@@ -486,13 +486,9 @@ h3{
 
 .background1 {
     background: url("../assets/servicesBg.png") center/cover no-repeat;
-    height: 450px;
+    height: 500px;
     margin: 0;
     width: 100%;
-}
-
-.background1 .headingSec{
-    margin-top: 1.5em;
 }
 
 
@@ -506,7 +502,7 @@ h1{
     align-items: center;
     gap: 16px;
     align-self: stretch;
-    margin: 5em 0em 6em 0em;
+    margin: 6em 0em 6em 0em;
 }
 
 .whyContainer{
