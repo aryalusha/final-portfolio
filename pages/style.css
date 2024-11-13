@@ -17,7 +17,7 @@ body{
 
 .background {
     background: url("assets_pages/projects_bg_alt.png") center/cover no-repeat;
-    height: 520px;
+    height: 540px;
     margin: 0;
 }
 
@@ -26,10 +26,10 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15em;
+    gap: 14em;
     align-self: stretch;
-    margin-bottom:  6.8em;
-    margin-top:  0.3em;
+    margin-bottom:  7.6em;
+    margin-top:  0.4em;
     
 }
 
@@ -44,14 +44,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.6em;
+    gap: 2.8em;
     flex-wrap: nowrap;
     overflow: hidden;
     white-space: nowrap;
 }
 
 .nav_list li a {
-    font-size:  0.875em;
+    font-size:  0.873em;
     font-weight: 500;
     text-decoration: none;
     color: #9393a2;
@@ -136,7 +136,7 @@ body{
 
 
 h1{
-    font-size: 3.125em;
+    font-size: 3.3em;
     font-style: normal;
     font-weight: 600;
     line-height: 123%;

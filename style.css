@@ -17,12 +17,12 @@ body{
 
 .background {
     background: url("assets/gradient2.png") center/cover no-repeat;
-    height: 930px;
+    height: 1000px;
     margin: 0;
 }
 
 .fullSec{
-    padding: 30px 160px 0px 160px;
+    padding: 100px 160px 0px 160px;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -30,18 +30,50 @@ body{
     align-items: center;
     gap: 40px;
     align-self: stretch;
+    height: 960px;
 }
 
-.nav {
+.navContainer{
+    width: 1200px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15em;
-    align-self: stretch;
-    margin-bottom:  6.1em;
-    margin-top:  0.3em;
+    z-index: 99;
 }
+
+.mainHead{
+    height: 90px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 9999;
+    transition: top 0.3s ease-in-out;
+}
+
+.mainHead .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-self: stretch;
+    height: 98px;
+    width: 88vw;
+    position: absolute;
+}   
+
+.mainHead .navLeft{
+    display: flex;
+    gap: 17em;
+}
+
+.nav.scrolled {
+    background-color: #d6d6d66b;
+}
+
 
 .logo {
     width: auto;
@@ -61,7 +93,7 @@ body{
 }
 
 .nav_list li a {
-    font-size:  0.875em;
+    font-size:  0.873em;
     font-weight: 500;
     text-decoration: none;
     color: #9393a2;
@@ -186,9 +218,9 @@ button:hover {
 }
 
 .heroImage{
+    margin-top: 2em;
     width: 1068px;
     height: 524px;
-    /* flex-shrink: 0; */
     background: url("assets/hero.png") center/cover no-repeat;
 }
 
@@ -769,7 +801,7 @@ h7{
 
     .background {
         background: url("assets/responsive\ background.jpg") center/cover no-repeat;
-        height: 850px;
+        height: 900px;
         width: 100%;
 
     }
@@ -777,12 +809,13 @@ h7{
         display: flex;
     }
 
-    .nav{
+    .mainHead .nav{
         justify-content: space-around;
-        margin-bottom: 5em;
+        align-items: center;
+        width: 100vw;
     }
 
-    #navLeft {
+    .mainHead .navLeft {
         display: none;
         position: absolute;
         top: 70px;
@@ -794,6 +827,10 @@ h7{
         text-align: center;
     }
 
+    .navContainer{
+        width: 100vw;
+    }
+
     .nav_list {
         flex-direction: column;
     }
@@ -802,7 +839,7 @@ h7{
         margin: 10px 0;
     }
 
-    .nav.active #itemList {
+    .nav.active .itemList {
         display: flex;
     }
 
@@ -821,6 +858,11 @@ h7{
      .socialLinks {
         display: none; 
     }
+
+    .fullSec{
+        padding: 30px 160px
+    }
+    
 
     .topItems{
         flex-direction: column;
@@ -847,13 +889,12 @@ h7{
     }
 
     .heroImage{
-        margin-top: 20px;
-        width: 80vw;
-        height: 100%;
-        object-fit: contain;
+        margin-top: 80px;
+        width: 60vw;
         min-height: 305px;
         max-width: 680px;
         margin-bottom: 0em;
+        height: auto;
         object-fit: cover;
     }
 
@@ -870,7 +911,7 @@ h7{
     
 
     .work{
-        margin-top: 0.1em;
+        margin-top: 4em;
     }
 
     .fullTea{
@@ -1089,10 +1130,9 @@ h7{
 
 @media (max-width: 767px){
     .background {
-        background: url("assets/responsive\ background.jpg") center/cover no-repeat;
-        height: 100vh;
-        width: 100%;
-        margin-bottom: 150px;
+        background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
+        height: 910px;
+        width: 100vw;
     }
 
     .menu-toggle {
@@ -1104,17 +1144,6 @@ h7{
         margin-bottom: 5em;
     }
 
-    #navLeft {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: #111;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
     .nav_list {
         flex-direction: column;
@@ -1144,38 +1173,35 @@ h7{
         display: none; 
     }
 
+    .fullSec{
+        padding: 60px 160px;
+    }
+
     .topItems{
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
         gap: 2.1em;
     }
+
     h1{
-        font-size: 3em;
+        font-size: 2.8em;
+        width: 500px;
         height: auto;
-        justify-content: space-around;
     }
 
     p{
         display: none;
     }
 
-
-    .paragraphTop{
-        margin-top: 0em;
-        width: 100%;
-        align-items: center;
-    }
-
     .heroImage{
-        margin-top: 20px;
+        margin-top: 60px;
         width: 80vw;
-        height: 100%;
-        object-fit: contain;
         min-height: 305px;
         max-width: 680px;
-        margin-bottom: 0em;
+        height: auto;
         object-fit: cover;
+    }
+
+    .work{
+        margin-top: 6em;
     }
 
     h2{
@@ -1187,11 +1213,6 @@ h7{
     .secondary-btn{
         height: 24px;
         font-size: 0.6em;
-    }
-    
-
-    .work{
-        margin-top: 0.1em;
     }
 
     .fullTea{
@@ -1349,7 +1370,6 @@ h7{
         
     }
 
-
     .img3{
         width: 35vw;
     }
@@ -1419,7 +1439,6 @@ h7{
         background: url("assets/responsive\ mobile.jpg") center/cover no-repeat;
         height: 700px;
         width: 100%;
-        margin-bottom: 20px;
 
     }
     .menu-toggle {
@@ -1427,14 +1446,10 @@ h7{
     }
 
     .nav{
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 5.5em;
-        margin-left: 20em;
-        margin-right: 20em;
+        margin-bottom: 0px;
     }
 
-    #navLeft {
+    .navLeft {
         display: none;
         position: absolute;
         top: 70px;
@@ -1474,36 +1489,19 @@ h7{
         display: none; 
     }
 
-    .headingItem{
-        justify-content: center;
+    .fullSec{
+        padding: 160px 0px;
+        justify-content: stretch;
         align-items: center;
-        width: 500px;
-        padding-left: 15em;
-        padding-right: 15em;
     }
 
-    .secondWork{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
 
     h1 {
         font-size: 1.9em;
         height: auto;
-        justify-content: center;
-        align-items: center;
         width: 320px;
     }
 
-    .textGradient{
-        background: var(--grad, linear-gradient(180deg, #FFF 0%, #96969e 148.13%));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 
     .headingText{
         text-align: center;
@@ -1532,13 +1530,11 @@ h7{
     }
 
     .heroImage{
-        margin-top: 1.8em;
+        margin-top: 60px;
         width: 80vw;
-        height: 100%;
-        object-fit: contain;
         min-height: 180px;
-        max-width: 690px;
-        margin-bottom: 0em;
+        max-width: 680px;
+        height: auto;
         object-fit: cover;
     }
 
@@ -1576,6 +1572,14 @@ h7{
       gap: 2em;
       align-items: center;
       width: 440px;
+    }
+
+    .secondWork{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
 
     .line{
@@ -1844,7 +1848,6 @@ h7{
         background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
         height: 670px;
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .nav{
@@ -1853,12 +1856,9 @@ h7{
         margin-bottom: 70px;
     }
 
-    .upper{
-        margin-top: 0px;
-    }
 
     .fullSec{
-        padding-top: 8px;
+        padding-top: 140 0px;
     }
 
     .menu-toggle {
@@ -1871,7 +1871,7 @@ h7{
     }
 
 
-    #navLeft {
+    .navLeft {
         display: none;
         position: absolute;
         top: 70px;
@@ -1970,15 +1970,17 @@ h7{
         align-items: center;
     }
 
+
     .heroImage{
         background: url("assets/mobile_hero.png") center/cover no-repeat;
         margin-top: 1em;
         width: 82vw;
-        height: 100%;
         min-height: 200px;
-        max-width: 600px;
-
+        max-width: 680px;
+        height: auto;
+        object-fit: cover;
     }
+
 
     .workContainer{
         gap: 76px;
