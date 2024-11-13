@@ -17,12 +17,12 @@ body{
 
 .background {
     background: url("assets/gradient2.png") center/cover no-repeat;
-    height: 1000px;
+    height: 980px;
     margin: 0;
 }
 
 .fullSec{
-    padding: 100px 160px 0px 160px;
+    padding: 84px 160px 0px 160px;
     align-items: stretch;
     display: flex;
     flex-direction: column;
