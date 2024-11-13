@@ -288,8 +288,6 @@ button:hover {
     margin-bottom: 22px;
 }
 
-
-
 .propertyImage{
     width: 500px;
     height: 500px;
@@ -502,7 +500,7 @@ h1{
     align-items: center;
     gap: 16px;
     align-self: stretch;
-    margin: 6em 0em 6em 0em;
+    margin: 6.6em 0em 6em 0em;
 }
 
 .whyContainer{
