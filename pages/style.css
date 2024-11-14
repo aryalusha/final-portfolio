@@ -66,7 +66,6 @@ body{
     font-weight: bold;
 } 
 
-
 .socialLinks{
     display: flex;
     align-items: center;
@@ -153,10 +152,14 @@ h1{
     margin-top: 0em;
 }
 
+a {
+    text-decoration: none; 
+}
+
 button{
     display: flex;
     width: 170px;
-    height: 42px;
+    height: 40px;
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -751,6 +754,7 @@ h2{
     font-size: 0.89em;
     font-weight: 600;
     color: #c3c3cc;
+    gap: 14px;
 }
 
 .last-email-container{
@@ -787,7 +791,9 @@ h2{
     flex-direction: column;
     gap:1.9em;
     margin-bottom: 4em;
+    padding-bottom: 0px;
 }
+
 
 .footer_list{
     gap: 3em;
@@ -1280,4 +1286,29 @@ h7{
     }
 
     
+}
+
+
+/* for singlepage of projects */
+
+.background5{
+    background: url("../assets/singlePageBg.jpg") center/cover no-repeat;
+    height: 800px;
+    margin: 0;
+}
+
+.SingleHeading{
+    display: inline-flex;
+    padding: 0px 150px;
+    align-items: center;
+    gap: 55px;
+}
+
+.rightText{
+    display: flex;
+    width: 536px;
+    height: 438px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
 }
