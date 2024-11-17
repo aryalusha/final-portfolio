@@ -62,32 +62,39 @@
                     </button>
                 </a>
 
+    
             </div>
         </div>
     </div>
     <div class="tabBox1">
         <div class="tabContainer">
+
             <div class="tabBox">
-                <button class="tabBtn "> Featured Work</button>
-                <button class="tabBtn activeBtn"> Other Ui/Ux work</button>
-                <button class="tabBtn"> Illustration</button>
-                <button class="tabBtn"> Photoshop</button>
-                <button class="tabBtn"> Logo Design</button>
-                <button class="tabBtn"> Poster Design</button>
-                <button class="tabBtn"> After effect videos</button>
+                
+                <button class="tabBtn tabBtn--active" data-for-tab="1"> Featured Work</button>
+                <button class="tabBtn" data-for-tab="2"> Other Ui/Ux work</button>
+                <button class="tabBtn"data-for-tab="3"> Illustration</button>
+                <button class="tabBtn" data-for-tab="4"> Photoshop</button>
+                <button class="tabBtn" data-for-tab="5"> Logo Design</button>
+                <button class="tabBtn" data-for-tab="6"> Poster Design</button>
+                <button class="tabBtn" data-for-tab="7"> After effect videos</button>
     
             </div>
         </div>
-        <div class="work ">
+
+        <div class="work work--active" data-tab="1" >
             <div class="bothWork ">
                 <div class="workWholeContainer">
-                    <div class="workBox1 workSpacing"> 
-                        <div class="propertyImage teaImg"> </div>
-                        <div class="textWork">
-                            <button class="secondary-btn">Ecommerce</button>
-                            <h3 class="textGradient textProperty1">Tea Manufacturing Company's  ecommerce website</h3>
+                    <a href="../pages/teaSingle.html">
+                        <div class="workBox1 workSpacing"> 
+                            <div class="propertyImage teaImg"> </div>
+                            <div class="textWork">
+                                <button class="secondary-btn">Ecommerce</button>
+                                <h3 class="textGradient textProperty1">Tea Manufacturing Company's  ecommerce website</h3>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    
                     <div class="workBox2 workSpacing"> 
                         <div class="propertyImage influencerImg"> </div>
                         <div class="textWork">
@@ -118,7 +125,7 @@
         </div>
 
 
-        <div class="work activeContainer">
+        <div class="work" data-tab="2">
             <div class="bothWork ">
                 <div class="workWholeContainer">
                     <div class="workBox1 workSpacing"> 
@@ -157,6 +164,44 @@
             </div>
             
         </div>
+
+
+        <div class="work" data-tab="3">
+            <div class="bothWork ">
+                <div class="workWholeContainer">
+                    <div class="workBox1 workSpacing"> 
+                        <div class="propertyImage teaImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Tea Manufacturing Company's  ecommerce website</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="workBox2 workSpacing"> 
+                        <div class="propertyImage influencerImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Marketplace for influencers and businesses</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="workWholeContainer2">
+                    <div class="workBox1 workSpacing"> 
+                        <div class="propertyImage accountingImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Cloud-based accounting software</h3>
+                        </div>
+                    </div>
+                    <div class="workBox2 workSpacing"> 
+                        <div class="propertyImage scodusImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Scodus Innovation's Website</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
     </div>
 
     <div class="join">
@@ -204,6 +249,8 @@
         </div>
     </div>
     
+
+    <script src="script.js"></script>
     
 </body>
 </html>
