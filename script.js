@@ -18,3 +18,23 @@ document.addEventListener("scroll", () => {
       }
     });
   });
+
+
+
+
+// navbar 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector(".menu-toggle");
+  const navLeft = document.querySelector(".navLeft");
+
+  toggleButton.addEventListener("click", () => {
+      navLeft.classList.toggle("active");
+  });
+
+  // Close the menu when clicking on a link (optional)
+  document.querySelectorAll(".nav_list a").forEach(link => {
+      link.addEventListener("click", () => {
+          navLeft.classList.remove("active");
+      });
+  });
+});

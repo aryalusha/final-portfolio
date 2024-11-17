@@ -5,6 +5,7 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
       event.preventDefault();
       const targetId = event.target.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
+      
   
       // Scroll to the target section smoothly
       targetSection.scrollIntoView({
@@ -18,18 +19,23 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
   window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("#ContentProjects section");
     const sidebarLinks = document.querySelectorAll(".sidebar nav ul li a");
+
   
     let currentSectionId = "";
+
   
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 0; 
+      const sectionTop = section.offsetTop - 50; 
       const sectionHeight = section.offsetHeight;
   
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
         currentSectionId = section.getAttribute("id");
+        section.querySelector("h3").classList.add("highlight-heading");
+        section.classList.add("active-section");
       }
       else {
         section.classList.remove("active-section"); 
+        section.querySelector("h3").classList.remove("highlight-heading");
     }
     });
   
@@ -40,17 +46,46 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
       }
     });
   });
-  
 
-  document.querySelector(".next-project").addEventListener("click", () => {
+
+  const nextProjectButton = document.querySelector(".next-project");
+if (nextProjectButton) {
+  nextProjectButton.addEventListener("click", () => {
     alert("Next project coming soon!");
   });
+}
   
-  const style = document.createElement("style");
-  style.textContent = `
-    .sidebar nav ul li a.active {
-      color: #ff6f61;
-      font-weight: 500;
-    }
-  `;
-  document.head.appendChild(style);
+
+
+// for projects
+
+function setupTabs () {
+   document.querySelectorAll(".tabBtn").forEach(button => {
+      button.addEventListener("click", () =>{
+        const tabBar =button.parentElement;
+        const tabContainer = button.closest(".tabBox1");
+        const tabNumber = button.dataset.forTab;
+        const tabToActivate = tabContainer.querySelector(`.work[data-tab="${tabNumber}"]`);
+
+        tabBar.querySelectorAll(".tabBtn").forEach(button =>{
+          button.classList.remove("tabBtn--active");
+        });
+
+        tabContainer.querySelectorAll(".work").forEach(tab =>{
+          tab.classList.remove("work--active");
+        });
+
+        button.classList.add("tabBtn--active");
+        tabToActivate.classList.add("work--active");
+        
+      });
+   });
+}
+
+document.addEventListener("DOMContentLoaded", () =>{
+    setupTabs();
+});
+
+
+
+
