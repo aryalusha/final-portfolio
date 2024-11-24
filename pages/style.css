@@ -1843,4 +1843,123 @@ section {
 
 
   
+/* about us  */
+
+.backgroundAbout{
+    background: url("../assets/about-me-background.png") center/cover no-repeat;
+    height: 840px;
+    margin: 0;
+}
+
+.backgroundAbout .meetContainer{
+    width: 510px;
+}
+
+
+.headingAbout{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.headingAbout .leftContainer{
+    height:520px;
+}
+
+.headingAbout h1{
+    line-height: 123%;
+    height: 100px;
+    text-align: left;
+}
+
+.textProperty8{
+    background: linear-gradient(272deg, #ebeaea 60%, #828080 86.45%, #141415 113.83%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headingAbout p{
+    color: #9A99A5;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 182%;
+    margin-bottom: 50px;
+}
+
+.aboutMe{
+    background: url("../assets/aboutMe.png") center/cover no-repeat;
+    width: 598px;
+    height: 568px;
+}
+
+.keyElements{
+    width: 100vw;
+    
+}
+
+.elementsContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 80px;
+    
+}
+
+.keyElements h3{
+    width: 603.172px;
+    font-weight: 600;
+    line-height: 132%;
+    font-size: 40px;
+    background: linear-gradient(257deg, #FFF 8.68%, #828080 89.61%, #141415 102.81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.keyElements .cards{
+    display: flex;
+    padding: 60px 40px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    background: #181818;
+}
+
+.elementsCard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for the first row */
+    gap: 40px;
+    padding: 90px 160px 100px 160px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+.cardContent{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardContent h5{
+    font-weight: 600;
+    line-height: 145%;
+    font-size: 18px;
+    color: #EAEAEA;
+}
+
+.cards p{
+    color: var(--Grayscale-400, #9D9CAF);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 215%; 
+    margin-top: 1.4em;
+}
 
