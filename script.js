@@ -6,35 +6,16 @@ window.addEventListener( 'scroll', function(){
 })
 
 
-document.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll("section");
-    const sidebarLinks = document.querySelectorAll(".sidebar nav ul li a");
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLeft = document.querySelector('.navLeft');
   
-    sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-        sidebarLinks.forEach(link => link.classList.remove("active"));
-        sidebarLinks[index].classList.add("active");
-      }
-    });
-  });
+  console.log(menuToggle); // Should log the menu toggle element
+  console.log(navLeft); // Should log the navLeft element
 
-
-
-
-// navbar 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.querySelector(".menu-toggle");
-  const navLeft = document.querySelector(".navLeft");
-
-  toggleButton.addEventListener("click", () => {
-      navLeft.classList.toggle("active");
-  });
-
-  // Close the menu when clicking on a link (optional)
-  document.querySelectorAll(".nav_list a").forEach(link => {
-      link.addEventListener("click", () => {
-          navLeft.classList.remove("active");
-      });
+  menuToggle.addEventListener('click', () => {
+      navLeft.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+      console.log('Menu toggled!'); // To check if the event fires
   });
 });
