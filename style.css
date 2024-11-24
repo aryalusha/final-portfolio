@@ -708,7 +708,7 @@ h6{
 
 .joinBtn{
     height: 50px;
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 600;
     color: #c3c3cc;
     text-decoration: none;
@@ -794,14 +794,17 @@ h7{
 .menu-toggle {
     display: none; 
     flex-direction: column; 
-    cursor: pointer; 
+    cursor: pointer;
+
 }
 
 .bar {
     height: 2.2px;
-    width: 24px;
+    width: 80%;
+    /* width: 28px; */
     background-color: #636060; 
-    margin: 3px 0; 
+    margin: 2px 0; 
+    transition: all 0.3s ease;
 }
 
 #navLeft{
@@ -822,8 +825,55 @@ h7{
         width: 100%;
 
     }
+
     .menu-toggle {
+        gap: 5px;
+        cursor: pointer;
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; /* Ensure it is above other elements */
+        width: 30px; /* Adjust as needed */
+        height: 30px;
+    }
+
+    .nav{
+        margin-bottom: 0px;
+        overflow: visible;
+        justify-content: space-around;
+        margin-bottom: 5em;
+    }
+
+    .navLeft {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #383838;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+        margin-top: 20px;
+        height: 100vh;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .mainHead .nav{
@@ -868,8 +918,53 @@ h7{
         display: flex; 
     }
 
+
     .menu-toggle {
-        display: flex; 
+        gap: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; /* Ensure it is above other elements */
+        width: 30px; /* Adjust as needed */
+        height: 30px;
+    }
+
+    .nav{
+        margin-bottom: 0px;
+        overflow: visible;
+    }
+
+    .navLeft {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #383838;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+        margin-top: 20px;
+        height: 100vh;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
      .socialLinks {
@@ -1152,8 +1247,53 @@ h7{
         width: 100vw;
     }
 
+    
     .menu-toggle {
+        gap: 5px;
+        cursor: pointer;
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; /* Ensure it is above other elements */
+        width: 30px; /* Adjust as needed */
+        height: 30px;
+    }
+
+    .nav{
+        margin-bottom: 0px;
+        overflow: visible;
+    }
+
+    .navLeft {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #383838;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+        margin-top: 20px;
+        height: 100vh;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .nav{
@@ -1459,11 +1599,20 @@ h7{
 
     }
     .menu-toggle {
+        gap: 5px;
+        cursor: pointer;
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; /* Ensure it is above other elements */
+        width: 30px; /* Adjust as needed */
+        height: 30px;
     }
 
     .nav{
         margin-bottom: 0px;
+        overflow: visible;
     }
 
     .navLeft {
@@ -1471,11 +1620,30 @@ h7{
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #111;
+        background-color: #383838;
         width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 2em;
+        margin-top: 20px;
+        height: 100vh;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .nav_list {
