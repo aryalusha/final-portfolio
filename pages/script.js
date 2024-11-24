@@ -22,25 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const menuToggle = document.querySelector('.menu-toggle');
-//   const navLeft = document.querySelector('.navLeft');
-
-//   // Check if elements exist before attaching listeners
-//   if (menuToggle && navLeft) {
-//     console.log(menuToggle); // Log the menu toggle element
-//     console.log(navLeft); // Log the navLeft element
-
-//     menuToggle.addEventListener('click', () => {
-//       navLeft.classList.toggle('active');
-//       menuToggle.classList.toggle('open');
-//       console.log('Menu toggled!'); // Log to confirm the toggle event
-//     });
-//   } else {
-//     console.error('Menu toggle or navLeft element is missing in the DOM.');
-//   }
-// });
-
 
 // Smooth Scrolling for Sidebar Links
 document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
