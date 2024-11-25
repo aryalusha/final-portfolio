@@ -2055,6 +2055,10 @@ h7{
         height: 60px;
     }
 
+    .paragraphTop .joinBtn{
+        font-size: 1em;
+    }
+
 
     .navLeft {
         display: none;
