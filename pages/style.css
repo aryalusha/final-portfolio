@@ -1366,6 +1366,24 @@ h7{
         text-align: center;
     }
 
+    .join .joinBtn{
+        padding: 1.2em;
+        font-size: 0.8em;
+        height: 38px;
+        width: auto;
+    }
+
+    .join .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .last-email-container{
+        width: 78vw;
+        height: 260px;
+        border-radius: 26px;
+    }
+
 }
 
 
@@ -1562,6 +1580,13 @@ h7{
 
     .footer h7{
         margin-top: 0.8em;
+    }
+
+    .join .joinBtn{
+        padding: 1.2em;
+        font-size: 0.8em;
+        height: 38px;
+        width: auto;
     }
 
     
