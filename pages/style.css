@@ -1676,6 +1676,7 @@ h7{
     gap: 3.2em;
     flex-shrink: 0;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contentContainer{
@@ -1807,8 +1808,6 @@ section {
     margin-top: 16px;
     color: #bcbcbc;
     font-weight: 600;
-    /* transition: color 0.3s, opacity 0.3s;
-    opacity: 0.6;  */
 }
 
 #ContentProjects h3.highlight-heading {
@@ -1863,6 +1862,178 @@ section {
     line-height: 30px; 
     text-align: left;
     width: 80%;
+}
+
+
+@media (max-width: 1199px){
+
+    .background5{
+        height: 760px;
+    }
+
+    .leftText{
+        width: 350px;
+        height: auto;
+        gap: 18px;
+    }
+
+    .SingleHeading{
+        gap: 0.5em;
+    }
+
+    .SingleHeading h1{
+        font-size: 1.8em;
+        width: 300px;
+    }
+
+    .SingleHeading p{
+        font-size: 14px;
+        width: 310px;
+        margin-top: 1em;
+    }
+
+    .SingleHeading .teaLaptop{
+        background: url("../assets/laptopTea.png") center/cover no-repeat;
+        contain: fit;
+        height: 300px;
+        width: 300px;
+    }
+
+    .SingleHeading .btns{
+        font-size: 0.9em;
+    }
+
+    .roleContainer{
+        margin-top: 80px;
+        gap: 1.2em;
+    }
+
+    .roleContainer h5, p {
+        font-size: 14px;
+    }
+
+    .roleContainer .containerTimeline{
+        width: 19%;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .container{
+        display: none;
+    }
+
+    .itemsContainer{
+        padding: 60px 80px 40px 80px;
+    }
+
+    #ContentProjects{
+        gap: 1.4em;
+    }
+    
+}
+
+
+@media (max-width: 767px){
+
+    .background5{
+        height: 1200px;
+    }
+
+
+    .SingleHeading{
+        flex-direction: column;
+    }
+
+    .SingleHeading .leftText{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .SingleHeading .textGradient1, .SingleHeading p{
+        width: 500px;
+        text-align: center;
+    }
+
+    .SingleHeading .teaLaptop {
+        margin-top: 40px;
+        width: 60%;
+        height: 300px;
+    }
+
+    .roleContainer{
+        padding: 0px 60px 0px 60px;
+    }
+
+    .containerTimeline, .containerTimeline1 {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .goal-cards{
+        gap: 8px;
+    }
+
+    .goal-cards .cards{
+        width: 100%;
+    }
+
+    .goal-cards h5{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .background5{
+        height: 1350px;
+    }
+
+    .SingleHeading .textGradient1, .SingleHeading p{
+        width: 300px;
+        text-align: center;
+    }
+
+    .SingleHeading h1{
+        font-size: 1.6em;
+    }
+
+    .btns{
+        font-size: 1em;
+    }
+
+    .SingleHeading .teaLaptop{
+        width: 300px;
+    }
+
+    .roleContainer {
+        padding: 0px 20px 0px 20px;
+        margin-top: 40px;
+    }
+
+    .roleContainer p{
+        font-size: 0.8em;
+    }
+
+    .roleContainer .containerTimeline, .containerTimeline1{
+        height: 200px;
+    }
+
+    .goal-cards{
+        flex-direction: column;
+    }
+
+    #ContentProjects {
+        width: 100%;
+    }
+
+    .itemsContainer {
+        padding: 40px 40px 60px 40px;
+    }
+
 }
 
 
@@ -2115,6 +2286,9 @@ section {
 
 @media only screen and (max-width: 600px) {
 
+    .backgroundAbout{
+        height: 1130px;
+    }
 
     .headingAbout h1{
         font-size: 2.2em;
@@ -2128,10 +2302,51 @@ section {
         padding: 60px 60px 80px 60px;
         gap: 0.9em;
         grid-template-columns: repeat(1, 1fr);
-        
     }
 
+    .headingAbout .leftContainer {
+        width: 80%;
+        height: 500px;
+    }
+
+    .headingAbout .joinBtn{
+        font-size: 0.9em;
+        justify-content: center;
+    }
+
+    .headingAbout .aboutMe{
+        width: 300px;
+        height: 400px;
+    }
+
+    .keyElements h3{
+        font-size: 1.7em;
+        width: 350px;
+        margin-top: 0px;
+    }
+
+    .elementsContainer{
+        margin-top: 50px;
+    }
 
 }
 
 
+@media only screen and (max-width: 375px){
+    .headingAbout h1{
+        font-size: 2em;
+    }
+
+    .headingAbout p{
+        font-size: 0.9em;
+    }
+
+    .keyElements h3{
+        font-size: 1.4em;
+        width: 300px;
+    }
+
+
+
+
+}
