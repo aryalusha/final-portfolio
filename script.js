@@ -1,3 +1,33 @@
+gsap.from('.mainHead',{
+    opacity:0,
+    delay:2.2,
+    y: -20,
+    duration: 1,
+    ease: "power2.out"
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.from('.headingText', {
+        opacity: 0,
+        delay: 1.2,
+        x: 100,
+        duration: 1.5,
+        ease: "power2.out"
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.from('.paragraphTop', {
+        opacity: 0,
+        delay: 1.4,
+        x: -100,
+        duration: 1.5,
+        ease: "power2.out"
+    });
+});
+
+
+
 const nav = document.querySelector(".mainHead");
 window.addEventListener( 'scroll', function(){
     if(this.scrollY > 200){
