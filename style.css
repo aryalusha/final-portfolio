@@ -156,6 +156,7 @@ body{
     align-self: stretch;
 }
 
+
 h1{
     background: linear-gradient(99deg, hsl(0, 5%, 93%) 8.67%, #858282 57.95%, #2c2c2e 96.71%);
     background-clip: text;
@@ -822,7 +823,8 @@ h7{
         background: url("assets/responsive\ background.jpg") center/cover no-repeat;
         height: 900px;
         width: 100%;
-
+        z-index: -10;
+        position: relative;
     }
 
     .menu-toggle {
@@ -832,8 +834,8 @@ h7{
         flex-direction: column;
         gap: 5px;
         position: relative;
-        z-index: 10; /* Ensure it is above other elements */
-        width: 30px; /* Adjust as needed */
+        z-index: 10; 
+        width: 30px; 
         height: 30px;
     }
 
@@ -844,41 +846,28 @@ h7{
         margin-bottom: 5em;
     }
 
-    .navLeft {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: #383838;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2em;
-        margin-top: 20px;
-        height: 100vh;
-    }
-
-    .navLeft.active {
-        display: flex;
-    }
-
     .menu-toggle.open .bar:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
     .menu-toggle.open .bar:nth-child(2) {
-        opacity: 0; /* Hide the middle bar */
+        opacity: 0; 
     }
 
     .menu-toggle.open .bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
+    .socialLinks {
+        display: none; 
+    }
+
     .mainHead .nav{
         justify-content: space-around;
         align-items: center;
         width: 100vw;
+        margin-bottom: 0px;
+        overflow: visible;
     }
 
     .mainHead .navLeft {
@@ -886,11 +875,18 @@ h7{
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #111;
+        background-color: #323232;
         width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        z-index: 100;
+        height: 100vh;
+        padding-top: 60px;
+    }
+
+    .navLeft.active {
+        display: flex;
     }
 
     .navContainer{
@@ -925,53 +921,13 @@ h7{
         flex-direction: column;
         gap: 5px;
         position: relative;
-        z-index: 10; /* Ensure it is above other elements */
-        width: 30px; /* Adjust as needed */
+        z-index: 10; 
+        width: 30px;
         height: 30px;
     }
 
-    .nav{
-        margin-bottom: 0px;
-        overflow: visible;
-    }
-
-    .navLeft {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: #383838;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2em;
-        margin-top: 20px;
-        height: 100vh;
-    }
-
-    .navLeft.active {
-        display: flex;
-    }
-
-    .menu-toggle.open .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.open .bar:nth-child(2) {
-        opacity: 0; /* Hide the middle bar */
-    }
-
-    .menu-toggle.open .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-     .socialLinks {
-        display: none; 
-    }
-
     .fullSec{
-        padding: 30px 160px
+        padding: 30px 160px;
     }
     
 
@@ -980,6 +936,7 @@ h7{
         justify-content: center;
         text-align: center;
         gap: 2.1em;
+        z-index: 0;
     }
     h1{
         font-size: 3em;
@@ -1007,6 +964,7 @@ h7{
         margin-bottom: 0em;
         height: auto;
         object-fit: cover;
+        z-index: -1;
     }
 
     h2{
@@ -1257,6 +1215,7 @@ h7{
         z-index: 10; /* Ensure it is above other elements */
         width: 30px; /* Adjust as needed */
         height: 30px;
+        
     }
 
     .nav{
@@ -1277,6 +1236,7 @@ h7{
         padding: 2em;
         margin-top: 20px;
         height: 100vh;
+        z-index: 1000;
     }
 
     .navLeft.active {
@@ -2032,6 +1992,7 @@ h7{
         background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
         height: 670px;
         width: 100%;
+        z-index: -1;
     }
 
     .nav{
@@ -2043,6 +2004,7 @@ h7{
 
     .fullSec{
         padding-top: 140 0px;
+        z-index: -1;
     }
 
     .menu-toggle {
@@ -2064,11 +2026,18 @@ h7{
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #111;
+        background-color: #3d3d3d;
         width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        z-index: 9999;
+    }
+
+    .navLeft.active {
+        display: flex;
+        background-color: #3d3d3d;
+        z-index: 9999;
     }
 
     .nav_list {
@@ -2102,6 +2071,7 @@ h7{
     .headingItem{
         padding-left: 16em;
         padding-right: 16em;
+
     }
 
     h1 {
