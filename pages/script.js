@@ -22,6 +22,65 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  if (!window.location.pathname.includes('index.html')) {
+    const animateFromBottom = (selector) => {
+      gsap.fromTo(
+        selector, 
+        {
+          opacity: 0,    
+          y: 100,     
+        },
+        {
+          opacity: 1,
+          y: 0,       
+          duration: 1.8,   
+          ease: 'power3.out',
+          delay: 0.3,  
+          scrollTrigger: {
+            trigger: selector, 
+            start: 'top 80%',   
+            toggleActions: 'play none none none', 
+          },
+        }
+      );
+    };
+
+    animateFromBottom('.headingSec');
+    animateFromBottom('.header');
+  }
+});
+
+const animateFromSide = (selector, fromX, toX) => {
+  gsap.fromTo(
+    selector,  // Target element
+    {
+      opacity: 0,   // Start from invisible
+      x: fromX,     // Start from off-screen (left or right)
+    },
+    {
+      opacity: 1,   // Fade in to full opacity
+      x: toX,       // End at original position (center)
+      duration: 1.5,   // Duration of animation (smooth)
+      ease: 'power3.out', // Smooth easing
+      delay: 0.4,    // Small delay for smoother staggered effect
+      scrollTrigger: {
+        trigger: selector, // Trigger the animation when the element comes into view
+        start: 'top 80%',   // Start when the top of the element is 80% from the top of the viewport
+        toggleActions: 'play none none none', // Play animation when triggered
+      },
+    }
+  );
+};
+
+// Animate .leftContainer from left
+animateFromSide('.leftContainer', 120, 0);
+
+// Animate .aboutMe from right
+animateFromSide('.aboutMe', -120, 0);
+
+
+
 
 // Smooth Scrolling for Sidebar Links
 document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
@@ -31,7 +90,6 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
       const targetSection = document.getElementById(targetId);
       
   
-      // Scroll to the target section smoothly
       targetSection.scrollIntoView({
         behavior: "smooth",
         block: "start"
@@ -39,7 +97,6 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
     });
   });
   
-  // Highlight Active Section in Sidebar
   window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("#ContentProjects section");
     const sidebarLinks = document.querySelectorAll(".sidebar nav ul li a");
