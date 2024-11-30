@@ -8,21 +8,22 @@
 html, body {
     overflow-x: hidden; 
     width: 100%;        
-    height: 100%;    
+    height: 100%;   
+    scroll-behavior: smooth; 
 }
 
 body{
-    background-color: #0B0B0B;;
+    background-color: #0B0B0B;
 }
 
 .background {
     background: url("assets/gradient2.png") center/cover no-repeat;
-    height: 930px;
+    height: 980px;
     margin: 0;
 }
 
 .fullSec{
-    padding: 30px 160px 0px 160px;
+    padding: 88px 160px 0px 160px;
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -30,18 +31,43 @@ body{
     align-items: center;
     gap: 40px;
     align-self: stretch;
+    height: 960px;
 }
 
-.nav {
+.navContainer{
+    width: 1320px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15em;
-    align-self: stretch;
-    margin-bottom:  6.1em;
-    margin-top:  0.3em;
+
 }
+
+.mainHead{
+    height: 0px;
+    width: 100vw;
+    position: static;
+    background: transparent;
+}
+
+
+.mainHead .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-self: stretch;
+    height: 98px;
+    width: 1350px;
+    position: static;
+}   
+
+.mainHead .navLeft{
+    display: flex;
+    gap: 17em;
+}
+
 
 .logo {
     width: auto;
@@ -60,8 +86,12 @@ body{
     white-space: nowrap;
 }
 
+.nav_list li a:hover{
+    color: #0B0B0B;
+} 
+
 .nav_list li a {
-    font-size:  0.875em;
+    font-size:  0.873em;
     font-weight: 500;
     text-decoration: none;
     color: #9393a2;
@@ -106,9 +136,18 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    gap: 30px;
-    margin-top: 58px;  
+    gap: 26px;
 }
+
+.upperText{
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 180%;
+    width: 330px;
+    align-self: stretch;
+    text-align: right;
+}
+
 
 .headingText{
     display: flex;
@@ -117,6 +156,7 @@ body{
     gap: 8px;
     align-self: stretch;
 }
+
 
 h1{
     background: linear-gradient(99deg, hsl(0, 5%, 93%) 8.67%, #858282 57.95%, #2c2c2e 96.71%);
@@ -145,14 +185,6 @@ h5{
     align-self: stretch;
 }
 
-.upperText{
-    font-size: 14px;
-    font-weight: 450;
-    line-height: 180%;
-    width: 330px;
-    align-self: stretch;
-    text-align: right;
-}
 
 p{
     background: linear-gradient(97deg, #eeeef1 -8.71%, #707075 74%);
@@ -168,29 +200,40 @@ button{
     padding: 10px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     border-radius: 6px;
     border: 1.2px solid #5a5965;
     background: #1F1F1F;
     color: #D1D1DB;
     font-weight: 500;
     font-size: 14px;
-}
-
-button {
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+
 button:hover {
     transform: scale(1.05);
+    text-decoration: none;
+}
+
+.buttons a {
+    text-decoration: none; 
+}
+
+.buttons a:hover {
+    text-decoration: none; 
 }
 
 .heroImage{
+    margin-top: 1.8em;
     width: 1068px;
     height: 524px;
-    /* flex-shrink: 0; */
     background: url("assets/hero.png") center/cover no-repeat;
 }
+
+
 
 .work{
     display: flex;
@@ -667,9 +710,15 @@ h6{
 
 .joinBtn{
     height: 50px;
-    font-size: 0.89em;
+    font-size: 1em;
     font-weight: 600;
     color: #c3c3cc;
+    text-decoration: none;
+}
+
+
+a {
+    text-decoration: none; 
 }
 
 .last-email-container{
@@ -693,6 +742,7 @@ h6{
     display: flex;
     flex-direction: row;
     gap: 32px;
+    text-decoration: none;
 }
 
 .textt{
@@ -745,14 +795,17 @@ h7{
 .menu-toggle {
     display: none; 
     flex-direction: column; 
-    cursor: pointer; 
+    cursor: pointer;
+
 }
 
 .bar {
     height: 2.2px;
-    width: 24px;
+    width: 80%;
+    /* width: 28px; */
     background-color: #636060; 
-    margin: 3px 0; 
+    margin: 2px 0; 
+    transition: all 0.3s ease;
 }
 
 #navLeft{
@@ -769,29 +822,76 @@ h7{
 
     .background {
         background: url("assets/responsive\ background.jpg") center/cover no-repeat;
-        height: 850px;
+        height: 900px;
         width: 100%;
-
+        z-index: -10;
+        position: relative;
     }
+
     .menu-toggle {
+        gap: 5px;
+        cursor: pointer;
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; 
+        width: 30px; 
+        height: 30px;
     }
 
     .nav{
+        margin-bottom: 0px;
+        overflow: visible;
         justify-content: space-around;
         margin-bottom: 5em;
     }
 
-    #navLeft {
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; 
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .socialLinks {
+        display: none; 
+    }
+
+    .mainHead .nav{
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        margin-bottom: 0px;
+        overflow: visible;
+    }
+
+    .mainHead .navLeft {
         display: none;
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #111;
+        background-color: #323232;
         width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        z-index: 100;
+        height: 100vh;
+        padding-top: 60px;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .navContainer{
+        width: 100vw;
     }
 
     .nav_list {
@@ -802,7 +902,7 @@ h7{
         margin: 10px 0;
     }
 
-    .nav.active #itemList {
+    .nav.active .itemList {
         display: flex;
     }
 
@@ -814,19 +914,30 @@ h7{
         display: flex; 
     }
 
+
     .menu-toggle {
-        display: flex; 
+        gap: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; 
+        width: 30px;
+        height: 30px;
     }
 
-     .socialLinks {
-        display: none; 
+    .fullSec{
+        padding: 30px 160px;
     }
+    
 
     .topItems{
         flex-direction: column;
         justify-content: center;
         text-align: center;
         gap: 2.1em;
+        z-index: 0;
     }
     h1{
         font-size: 3em;
@@ -847,14 +958,14 @@ h7{
     }
 
     .heroImage{
-        margin-top: 20px;
-        width: 80vw;
-        height: 100%;
-        object-fit: contain;
+        margin-top: 80px;
+        width: 60vw;
         min-height: 305px;
         max-width: 680px;
         margin-bottom: 0em;
+        height: auto;
         object-fit: cover;
+        z-index: -1;
     }
 
     h2{
@@ -870,7 +981,7 @@ h7{
     
 
     .work{
-        margin-top: 0.1em;
+        margin-top: 4em;
     }
 
     .fullTea{
@@ -1089,14 +1200,60 @@ h7{
 
 @media (max-width: 767px){
     .background {
-        background: url("assets/responsive\ background.jpg") center/cover no-repeat;
-        height: 100vh;
-        width: 100%;
-        margin-bottom: 150px;
+        background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
+        height: 910px;
+        width: 100vw;
     }
 
+    
     .menu-toggle {
+        gap: 5px;
+        cursor: pointer;
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; /* Ensure it is above other elements */
+        width: 30px; /* Adjust as needed */
+        height: 30px;
+        
+    }
+
+    .nav{
+        margin-bottom: 0px;
+        overflow: visible;
+    }
+
+    .navLeft {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #383838;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em;
+        margin-top: 20px;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .nav{
@@ -1104,17 +1261,6 @@ h7{
         margin-bottom: 5em;
     }
 
-    #navLeft {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: #111;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
     .nav_list {
         flex-direction: column;
@@ -1144,38 +1290,35 @@ h7{
         display: none; 
     }
 
+    .fullSec{
+        padding: 60px 160px;
+    }
+
     .topItems{
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
         gap: 2.1em;
     }
+
     h1{
-        font-size: 3em;
+        font-size: 2.8em;
+        width: 500px;
         height: auto;
-        justify-content: space-around;
     }
 
     p{
         display: none;
     }
 
-
-    .paragraphTop{
-        margin-top: 0em;
-        width: 100%;
-        align-items: center;
-    }
-
     .heroImage{
-        margin-top: 20px;
+        margin-top: 60px;
         width: 80vw;
-        height: 100%;
-        object-fit: contain;
         min-height: 305px;
         max-width: 680px;
-        margin-bottom: 0em;
+        height: auto;
         object-fit: cover;
+    }
+
+    .work{
+        margin-top: 6em;
     }
 
     h2{
@@ -1187,11 +1330,6 @@ h7{
     .secondary-btn{
         height: 24px;
         font-size: 0.6em;
-    }
-    
-
-    .work{
-        margin-top: 0.1em;
     }
 
     .fullTea{
@@ -1349,7 +1487,6 @@ h7{
         
     }
 
-
     .img3{
         width: 35vw;
     }
@@ -1419,31 +1556,54 @@ h7{
         background: url("assets/responsive\ mobile.jpg") center/cover no-repeat;
         height: 700px;
         width: 100%;
-        margin-bottom: 20px;
 
     }
     .menu-toggle {
+        gap: 5px;
+        cursor: pointer;
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        z-index: 10; /* Ensure it is above other elements */
+        width: 30px; /* Adjust as needed */
+        height: 30px;
     }
 
     .nav{
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 5.5em;
-        margin-left: 20em;
-        margin-right: 20em;
+        margin-bottom: 0px;
+        overflow: visible;
     }
 
-    #navLeft {
+    .navLeft {
         display: none;
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #111;
+        background-color: #383838;
         width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 2em;
+        margin-top: 20px;
+        height: 100vh;
+    }
+
+    .navLeft.active {
+        display: flex;
+    }
+
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     .nav_list {
@@ -1474,36 +1634,19 @@ h7{
         display: none; 
     }
 
-    .headingItem{
-        justify-content: center;
+    .fullSec{
+        padding: 160px 0px;
+        justify-content: stretch;
         align-items: center;
-        width: 500px;
-        padding-left: 15em;
-        padding-right: 15em;
     }
 
-    .secondWork{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-    }
 
     h1 {
         font-size: 1.9em;
         height: auto;
-        justify-content: center;
-        align-items: center;
         width: 320px;
     }
 
-    .textGradient{
-        background: var(--grad, linear-gradient(180deg, #FFF 0%, #96969e 148.13%));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 
     .headingText{
         text-align: center;
@@ -1532,13 +1675,11 @@ h7{
     }
 
     .heroImage{
-        margin-top: 1.8em;
+        margin-top: 60px;
         width: 80vw;
-        height: 100%;
-        object-fit: contain;
         min-height: 180px;
-        max-width: 690px;
-        margin-bottom: 0em;
+        max-width: 680px;
+        height: auto;
         object-fit: cover;
     }
 
@@ -1576,6 +1717,14 @@ h7{
       gap: 2em;
       align-items: center;
       width: 440px;
+    }
+
+    .secondWork{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
 
     .line{
@@ -1785,7 +1934,7 @@ h7{
 
     .last-email-container{
         width: 81vw;
-        height: 180px;
+        height: 200px;
     }
 
     .email-downloadcv-container{
@@ -1795,7 +1944,7 @@ h7{
     }
 
     .textt{
-        font-size: 1.2em;
+        font-size: 1.3em;
         width: 13em;
         line-height: 128%;
         text-align: center;
@@ -1805,15 +1954,16 @@ h7{
         gap: 1em;
     }
 
-    .joinBtn{
-        height: 42px;
-        width: auto;
-        padding: 1em;
-    }
-
     .join{
         margin-bottom: 3.4em;
         align-items: center;
+    }
+
+    .join .joinBtn{
+        height: 42px;
+        width: auto;
+        padding: 1em;
+        font-size: 0.86em;
     }
 
     .footer{
@@ -1824,13 +1974,12 @@ h7{
         width: 100%;
     }
 
-
     .footer_list{
         font-size: 0.8em;
         gap: 20px;
         align-items: center;
-        margin-left: 0px;
-        margin-right: 5.5em;
+        margin-left: 4px;
+        margin-right: 4em;
     }
 
     h7{
@@ -1844,7 +1993,7 @@ h7{
         background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
         height: 670px;
         width: 100%;
-        margin-bottom: 20px;
+        z-index: -1;
     }
 
     .nav{
@@ -1853,15 +2002,11 @@ h7{
         margin-bottom: 70px;
     }
 
-    .upper{
-        margin-top: 0px;
-    }
 
     .fullSec{
-        padding-top: 8px;
+        padding-top: 140 0px;
+        z-index: -1;
     }
-        
-
 
     .menu-toggle {
         display: flex;
@@ -1872,17 +2017,28 @@ h7{
         height: 60px;
     }
 
+    .paragraphTop .joinBtn{
+        font-size: 1em;
+    }
 
-    #navLeft {
+
+    .navLeft {
         display: none;
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #111;
+        background-color: #3d3d3d;
         width: 100%;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        z-index: 9999;
+    }
+
+    .navLeft.active {
+        display: flex;
+        background-color: #3d3d3d;
+        z-index: 9999;
     }
 
     .nav_list {
@@ -1916,6 +2072,7 @@ h7{
     .headingItem{
         padding-left: 16em;
         padding-right: 16em;
+
     }
 
     h1 {
@@ -1972,15 +2129,17 @@ h7{
         align-items: center;
     }
 
+
     .heroImage{
         background: url("assets/mobile_hero.png") center/cover no-repeat;
         margin-top: 1em;
         width: 82vw;
-        height: 100%;
         min-height: 200px;
-        max-width: 600px;
-
+        max-width: 680px;
+        height: auto;
+        object-fit: cover;
     }
+
 
     .workContainer{
         gap: 76px;
@@ -2211,7 +2370,8 @@ h7{
 
     .last-email-container{
         width: 78vw;
-        height: 180px;
+        height: 260px;
+        border-radius: 26px;
     }
 
     .email-downloadcv-container{
@@ -2231,11 +2391,16 @@ h7{
         gap: 1em;
     }
 
-    .joinBtn{
+    .join .joinBtn{
+        padding: 1.2em;
+        font-size: 0.8em;
         height: 38px;
         width: auto;
-        padding: 1em;
-        font-size: 0.8em;
+    }
+
+    .join .buttons{
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer{

@@ -8,13 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <div class="background">
         <div class="fullSec">
             <div class="nav">
-                <img src="assets_pages/logo.png" alt="Logo" class="logo">
+                <a href="..\index.html">
+                    <img src="..\assets/logo.png" alt="Logo" class="logo">
+                </a>
                 <div class="menu-toggle">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -24,17 +27,21 @@
                     <div id="itemList">
                         <ul class="nav_list">
                             <li><a href="..\index.html">Home</a></li>
-                            <li><a href="pages/about-her.html">About Her</a></li>
-                            <li><a href="#projects" class="active ">Projects</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact-her">Contact Her</a></li>
+                            <li><a href="../pages/about-her.html">About Her</a></li>
+                            <li><a href="../pages/projects.html" class="active ">Projects</a></li>
+                            <li><a href="../pages/services.html">Services</a></li>
+                            <li><a href="../pages/contact.html">Contact Her</a></li>
                         </ul>
                     </div>
         
                     <div class="socialLinks"> 
-                        <img src="assets_pages/behance.png" alt="behance" class="imageSize">
-        
-                        <img src="assets_pages/dribbble.png" alt="dribble" class="imageSize"> 
+                        <a href="https://www.behance.net/ushaaryal1" target="_blank" rel="noopener noreferrer">
+                            <img src="..\assets/behance.png" alt="Behance" class="imageSize">
+                        </a>
+
+                        <a href="https://www.dribbble.com/ushaaryal" target="_blank" rel="noopener noreferrer">
+                            <img src="..\assets/dribbble.png" alt="Dribbble" class="imageSize">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -43,34 +50,51 @@
         <div class="headingSec">
             <h1 class="textProperty" >Explore some of her excellent work</h1>
             <div class="btns">
-                <button> Get In Touch</button>
-                <button class="download">Download CV</button>
+                <a href="mailto:u8900038@example.com">
+                    <button class="joinBtn">Email Her
+                        <i class="fas fa-envelope"></i> 
+                    </button>
+                </a>
+                
+                <a href="..\assets\Usha's CV.pdf">
+                    <button class="joinBtn">Download  CV
+                    <i class="fas fa-download"></i>
+                    </button>
+                </a>
+
+    
             </div>
         </div>
     </div>
     <div class="tabBox1">
         <div class="tabContainer">
+
             <div class="tabBox">
-                <button class="tabBtn "> Featured Work</button>
-                <button class="tabBtn activeBtn"> Other Ui/Ux work</button>
-                <button class="tabBtn"> Illustration</button>
-                <button class="tabBtn"> Photoshop</button>
-                <button class="tabBtn"> Logo Design</button>
-                <button class="tabBtn"> Poster Design</button>
-                <button class="tabBtn"> After effect videos</button>
+                
+                <button class="tabBtn tabBtn--active" data-for-tab="1"> Featured Work</button>
+                <button class="tabBtn" data-for-tab="2"> Other Ui/Ux work</button>
+                <button class="tabBtn"data-for-tab="3"> Illustration</button>
+                <button class="tabBtn" data-for-tab="4"> Photoshop</button>
+                <button class="tabBtn" data-for-tab="5"> Logo Design</button>
+                <button class="tabBtn" data-for-tab="6"> Poster Design</button>
+                <button class="tabBtn" data-for-tab="7"> After effect videos</button>
     
             </div>
         </div>
-        <div class="work activeContainer">
+
+        <div class="work work--active" data-tab="1" >
             <div class="bothWork ">
                 <div class="workWholeContainer">
-                    <div class="workBox1 workSpacing"> 
-                        <div class="propertyImage teaImg"> </div>
-                        <div class="textWork">
-                            <button class="secondary-btn">Ecommerce</button>
-                            <h3 class="textGradient textProperty1">Tea Manufacturing Company's  ecommerce website</h3>
+                    <a href="../pages/teaSingle.html">
+                        <div class="workBox1 workSpacing"> 
+                            <div class="propertyImage teaImg"> </div>
+                            <div class="textWork">
+                                <button class="secondary-btn">Ecommerce</button>
+                                <h3 class="textGradient textProperty1">Tea Manufacturing Company's  ecommerce website</h3>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    
                     <div class="workBox2 workSpacing"> 
                         <div class="propertyImage influencerImg"> </div>
                         <div class="textWork">
@@ -101,7 +125,7 @@
         </div>
 
 
-        <div class="work activeContainer">
+        <div class="work" data-tab="2">
             <div class="bothWork ">
                 <div class="workWholeContainer">
                     <div class="workBox1 workSpacing"> 
@@ -140,8 +164,94 @@
             </div>
             
         </div>
+
+
+        <div class="work" data-tab="3">
+            <div class="bothWork ">
+                <div class="workWholeContainer">
+                    <div class="workBox1 workSpacing"> 
+                        <div class="propertyImage teaImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Tea Manufacturing Company's  ecommerce website</h3>
+                            
+                        </div>
+                    </div>
+                    <div class="workBox2 workSpacing"> 
+                        <div class="propertyImage influencerImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Marketplace for influencers and businesses</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="workWholeContainer2">
+                    <div class="workBox1 workSpacing"> 
+                        <div class="propertyImage accountingImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Cloud-based accounting software</h3>
+                        </div>
+                    </div>
+                    <div class="workBox2 workSpacing"> 
+                        <div class="propertyImage scodusImg"> </div>
+                        <div class="textWork">
+                            <h3 class="textGradient textProperty1">Scodus Innovation's Website</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="join">
+        <div class="last-email-container">
+            <div class="email-downloadcv-container">
+                <h2 class="textGradient textt"> Hii, Let's create something awesome together.</h2>
+                <div class="buttons">
+                    <a href="mailto:u8900038@example.com">
+                        <button class="joinBtn">Email Her
+                            <i class="fas fa-envelope"></i> 
+                        </button>
+                    </a>
+                    
+                    <a href="..\assets\Usha's CV.pdf">
+                        <button class="joinBtn">Download  CV
+                        <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <div class="footer"> 
+                <ul class="footer_list">
+                    <li><a href="../pages/about-her.html">About Her</a></li>
+                    <li><a href="../pages/projects.html">Projects</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li><a href="../pages/contact.html">Contact Her</a></li>
+                </ul>
+                <div class="socialLinks"> 
+                    <a href="https://www.behance.net/ushaaryal1" target="_blank" rel="noopener noreferrer">
+                        <img src="..\assets/behance.png" alt="Behance" class="imageSize linkFooter">
+                    </a>
+
+                    <a href="https://www.dribbble.com/ushaaryal" target="_blank" rel="noopener noreferrer">
+                        <img src="..\assets/dribbble.png" alt="Dribbble" class="imageSize linkFooter">
+                    </a>
+                </div>
+                <h7> ©2024 usha portfolio. All rights reserved </h7>
+            </div>
+            
+        </div>
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>

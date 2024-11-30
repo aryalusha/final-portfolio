@@ -4,55 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title> Usha, Ui/Ux Designer </title>
-    <link rel="icon" href="assets/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     </head>
-
 <body>
 
 <!-- //hero section -->
 <main>
-    <div class="background"> 
-        <div class="fullSec">
-            <div class="upper">
+
+    <header class="mainHead">
+        <div class="navContainer">
                 <div class="nav">
-                    <img src="assets/logo.png" alt="Logo" class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="Logo" class="logo">
+                      </a>
                     <div class="menu-toggle">
                         <div class="bar"></div>
                         <div class="bar"></div>
                         <div class="bar"></div>
                     </div>
-                    <div id="navLeft">
-                        <div id="itemList">
+                    <div class="navLeft">
+                        <div class="itemList">
                             <ul class="nav_list">
                                 <li><a href="index.html"class="active">Home</a></li>
                                 <li><a href="pages/about-her.html">About Her</a></li>
                                 <li><a href="pages/projects.html">Projects</a></li>
-                                <li><a href="#services">Services</a></li>
-                                <li><a href="#contact-her">Contact Her</a></li>
+                                <li><a href="pages/services.html">Services</a></li>
+                                <li><a href="pages/contact.html">Contact Her</a></li>
                             </ul>
-                        </div>
-                        <!-- <div id="itemList">
-                            <ul>
-                                <li class="main Text">Home</li>
-                                <li>projects</li>
-                                <li>About her</li>
-                                <li>Services</li>
-                                <li>Contact her</li>
-                            </ul>
-                        </div> -->
+                        </div>   
                         <div class="socialLinks"> 
-                            <img src="assets/behance.png" alt="behance" class="imageSize">
-    
-                            <img src="assets/dribbble.png" alt="dribble" class="imageSize"> 
+                            <a href="https://www.behance.net/ushaaryal1" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/behance.png" alt="Behance" class="imageSize">
+                            </a>
+
+                            <a href="https://www.dribbble.com/ushaaryal" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/dribbble.png" alt="Dribbble" class="imageSize">
+                            </a>
                         </div>
                     </div>
                     
                 </div>
+        </div>
+    </header>
+
+
+    <div class="background"> 
+        <div class="fullSec">
+            <div class="upper">
                 <div class="headingItem">
                     <div class="topItems">
                         <div class="headingText">
@@ -62,7 +66,12 @@
     
                         <div class="paragraphTop upperText">
                             <p> She is passionate about technology especially UI/UX design and She is firm believer in placing humanity in the center of technology.</p>
-                            <button id="cvDownload_nav">Download CV</button>
+
+                            <a href="assets\Usha's CV.pdf">
+                                <button class="joinBtn">Download  CV
+                                <i class="fas fa-download"></i>
+                                </button>
+                            </a>
                         </div>
     
                     </div>
@@ -79,11 +88,13 @@
             <div class="workContainer">
                 <div class="textWork">
                     <h2 class="textGradient">Explore some of her featured work</h2>
-                    <button>View all work</button>
+                    <a href="pages/projects.html">
+                        <button> View all work </button>
+                    </a>
                 </div>
                 <div class="workAll">
                     <div class="fullTea">
-                        <div>
+                        <div class="leftText">
                             <div>
                                 <button class="secondary-btn">Ecommerce</button>
                                 <div class="containerTea">
@@ -119,8 +130,10 @@
                                     <h4>Completed in 2 weeks</h4>
                                 </div>
                             </div>
-
-                            <button class="explore">Explore case study</button>
+                            
+                            <a href="pages/teaSingle.html">
+                                <button class="explore" > Explore case study </button>
+                            </a>
 
                         </div>
 
@@ -134,7 +147,7 @@
 
                         <div class="propertyImage accountImg"> </div>
                         
-                        <div>
+                        <div class="rightText">
                             <div>
                                 <button class="secondary-btn auto-hug">Saas Software</button>
                                 <div class="containerTea">
@@ -181,7 +194,7 @@
 
                 <div class="workAll">
                     <div class="fullTea">
-                        <div>
+                        <div class="workThird">
                             <div>
                                 <button class="secondary-btn">Marketing Platform</button>
                                 <div class="containerTea">
@@ -240,11 +253,11 @@
         
                         <div class="paraBreak">
                             <div class="aboutPara break">
-                                Usha is an experienced and skilled UI/UX designer with a comprehensive background in user research, prototyping, and design implementation. She has demonstrated strong leadership capabilities.
+                                Usha is a self-taught UI/UX designer from Nepal, currently working at Scodus Innovations. With a passion for creating seamless and impactful user experiences, she has refined her skills in user research, prototyping, and design implementation.
                             </div>
                             
                             <div class="aboutPara">
-                                She has successfully conducted user interviews, surveys, competitive analysis, and market research to inform design decisions.
+                                She has successfully conducted user interviews, competitive analysis, and market 
                             </div>
                         </div>
                     </div>
@@ -253,7 +266,7 @@
                 
                 <div class="aboutDescription"> 
                     <div >
-                        <div class="aboutPara break rightPara">  Her efforts in redesigning products have effectively addressed business goals, such as recapturing the consumer market.</div>
+                        <div class="aboutPara break rightPara"> research to inform design decisions.Her efforts in redesigning products have effectively addressed business goals, such as recapturing the consumer market.</div>
                         <div class="aboutPara rightPara"> Usha  also works closely with executives and higher management to produce high-quality prototypes and collaborates with both front-end and back-end developers to implement these designs seamlessly. </div>
                     </div>
                 
@@ -329,8 +342,18 @@
             <div class="email-downloadcv-container">
                 <h2 class="textGradient textt"> Hii, Let's create something awesome together.</h2>
                 <div class="buttons">
-                    <button class="joinBtn">Email Her</button>
-                    <button class="joinBtn">Download  CV</button>
+                    <a href="mailto:u8900038@example.com">
+                        <button class="joinBtn">Email Her
+                            <i class="fas fa-envelope"></i> 
+                        </button>
+                    </a>
+
+                    <a href="assets\Usha's CV.pdf">
+                        <button class="joinBtn">Download  CV
+                        <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                    
                 </div>
             </div>  
         </div>
@@ -340,15 +363,19 @@
         <div>
             <div class="footer"> 
                 <ul class="footer_list">
-                    <li><a href="#about-her">About Her</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact-her">Contact Her</a></li>
+                    <li><a href="pages/about-her.html">About Her</a></li>
+                    <li><a href="pages/projects.html">Projects</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/contact.html">Contact Her</a></li>
                 </ul>
                 <div class="socialLinks"> 
-                    <img src="assets/behance.png" alt="behance" class="imageSize linkFooter">
+                    <a href="https://www.behance.net/ushaaryal1" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/behance.png" alt="Behance" class="imageSize linkFooter">
+                    </a>
 
-                    <img src="assets/dribbble.png" alt="dribble" class="imageSize linkFooter"> 
+                    <a href="https://www.dribbble.com/ushaaryal" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/dribbble.png" alt="Dribbble" class="imageSize linkFooter">
+                    </a>
                 </div>
                 <h7> ©2024 usha portfolio. All rights reserved </h7>
             </div>
@@ -359,6 +386,9 @@
 </main>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
