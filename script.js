@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { 
       selector: '.mainHead', 
       from: { opacity: 0, y: -20 }, 
-      to: { delay: 2.4, duration: 1 } 
+      to: { delay: 2.2, duration: 1 } 
     },
     { 
       selector: '.headingText', 
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } 
     }
   ];
+  
 
   const defaultToProps = { ease: "power2.out", opacity: 1, x: 0, y: 0 };
 
@@ -94,6 +95,66 @@ animation.forEach(({ selector, x, y = '0' }) => {
     once: true, 
   });
 });
+
+gsap.fromTo('.subContainer', 
+  { opacity: 0, y: 100 },  
+  { 
+    opacity: 1, y: 0,   
+    duration: 1.5, 
+    ease: "power2.out", 
+    scrollTrigger: {
+      trigger: '.whyContainer', 
+      start: 'top 80%',       
+      toggleActions: 'play none none none' 
+    }
+  }
+);
+
+
+gsap.fromTo(
+  ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+  {
+    scale: 0.8,
+    opacity: 0, 
+    transformOrigin: 'center center', 
+  },
+  {
+    scale: 1, 
+    opacity: 1, 
+    duration: 0.6, 
+    ease: 'power2.out', 
+    stagger: (index, total) => {
+      if (index >= 4) {
+        return 0.3 * (index - 3); 
+      }
+      return 0.15; 
+    },
+    scrollTrigger: {
+      trigger: '.container1',
+      start: 'top 80%', 
+      toggleActions: 'play none none none', 
+    },
+  }
+);
+
+gsap.fromTo(
+  '.join',
+  {
+    opacity: 0, 
+    y: 100, 
+  },
+  {
+    opacity: 1,
+    y: 0, 
+    duration: 1, 
+    ease: 'power2.out', 
+    scrollTrigger: {
+      trigger: '.join', 
+      start: 'top 80%',
+      toggleActions: 'play none none none', 
+    },
+  }
+);
 
 
 
