@@ -1,69 +1,64 @@
-
-// Wait for DOMContentLoaded to run all animations
 document.addEventListener('DOMContentLoaded', () => {
-    // Main header animation
-    gsap.from('.mainHead', {
-      opacity: 0,
-      delay: 2.4,
-      y: -20,
-      duration: 1,
-      ease: "power2.out"
-    });
-  
-    // Heading text animation
-    gsap.from('.headingText', {
-      opacity: 0,
-      delay: 1.2,
-      x: 100,
-      duration: 1.5,
-      ease: "power2.out"
-    });
-  
-    // Paragraph animation
-    gsap.from('.paragraphTop', {
-      opacity: 0,
-      delay: 1.4,
-      x: -100,
-      duration: 1.4,
-      ease: "power2.out"
-    });
-  
-    // Hero image animation
-    gsap.from('.heroImage', {
-      opacity: 0,
-      delay: 1.8,
-      y: 100,
-      duration: 2,
-      ease: "power2.out"
-    });
-  });
-  
-  // Text work animation on scroll
-  gsap.fromTo(".textWork", 
-    { opacity: 0, y: 90 }, 
-    { 
-      opacity: 1, y: 0, 
-      duration: 1.5, 
-      scrollTrigger: {
-        trigger: ".background",
-        start: "bottom bottom",
-        toggleActions: "play none none none",
-      }
-    }
-  );
-  
-  // General-purpose animation for scrolling elements
+  gsap.registerPlugin(ScrollTrigger);
+
   const animations = [
+    { 
+      selector: '.mainHead', 
+      from: { opacity: 0, y: -20 }, 
+      to: { delay: 2.4, duration: 1 } 
+    },
+    { 
+      selector: '.headingText', 
+      from: { opacity: 0, x: 100 }, 
+      to: { delay: 1.2, duration: 1.5 } 
+    },
+    { 
+      selector: '.paragraphTop', 
+      from: { opacity: 0, x: -100 }, 
+      to: { delay: 1.4, duration: 1.4 } 
+    },
+    { 
+      selector: '.heroImage', 
+      from: { opacity: 0, y: 100 }, 
+      to: { delay: 1.8, duration: 2 } 
+    },
+    { 
+      selector: '.textWork', 
+      from: { opacity: 0, y: 90 }, 
+      to: { 
+        duration: 1.5, 
+        scrollTrigger: {
+          trigger: '.background',
+          start: 'bottom bottom',
+          toggleActions: 'play none none none'
+        }
+      } 
+    }
+  ];
+
+  const defaultToProps = { ease: "power2.out", opacity: 1, x: 0, y: 0 };
+
+  animations.forEach(({ selector, from, to }) => {
+    const finalTo = { ...defaultToProps, ...to };
+    if (finalTo.scrollTrigger) {
+      gsap.fromTo(selector, from, finalTo); 
+    } else {
+      gsap.fromTo(selector, from, { ...from, ...finalTo }); 
+    }
+  });
+});
+
+
+ const animations = [
     { selector: ".leftText", x: -120 },
     { selector: ".teaImg", x: 120 },
     { selector: ".rightText", x: 120 },
     { selector: ".accountImg", x: -120 },
     { selector: ".workThird", x: -120 },
     { selector: ".influencerImg", x: 120 },
-  ];
+];
   
-  // Apply ScrollTrigger animations for each element
-  animations.forEach(({ selector, x }) => {
+animations.forEach(({ selector, x }) => {
     ScrollTrigger.create({
       trigger: selector,
       start: "top bottom",
@@ -74,10 +69,31 @@ document.addEventListener('DOMContentLoaded', () => {
           { opacity: 1, x: 0, duration: 1.3 }
         );
       },
-      once: true, // Ensures the animation only plays once
+      once: true, 
     });
+});
+
+
+const animation = [
+  { selector: '.about-left', x: '-100' }, 
+  { selector: '.aboutDescription', x: '100' },  
+  { selector: '.aboutMe', x: '0', y: '0' }
+];
+
+animation.forEach(({ selector, x, y = '0' }) => {
+  ScrollTrigger.create({
+    trigger: selector,
+    start: "top 90%", 
+    onEnter: () => {
+      gsap.fromTo(
+        selector,
+        { opacity: 0, x: x, y: y },
+        { opacity: 1, x: 0, y: 0, duration: 1.4 }
+      );
+    },
+    once: true, 
   });
-  
+});
 
 
 
