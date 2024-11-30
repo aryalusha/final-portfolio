@@ -68,7 +68,6 @@ body{
     gap: 17em;
 }
 
-
 .logo {
     width: auto;
     height: 1.2em;
@@ -334,7 +333,7 @@ h3{
 }
 
 .propertyImage{
-    width: 537px;
+    width: 538px;
     height: 620px;
     background-size: cover;
     background-position: center;
@@ -343,7 +342,7 @@ h3{
 }
 
 .teaImg{
-    background-image: url('assets/tea.jpg');
+    background-image: url('assets/teaLaptop.jpg');
 }
 
 .accountImg{
