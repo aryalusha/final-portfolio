@@ -1,4 +1,63 @@
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const ease = "power4.inOut";
+
+//   document.querySelectorAll("a").forEach((link) => {
+//     link.addEventListener("click", (event) => {
+//       const href = link.getAttribute("href");
+      
+//       if (href && !href.startsWith("#") && href !== window.location.pathname) {
+//         event.preventDefault();
+        
+//         animateTransition().then(() => {
+//           window.location.href = href;  
+//         });
+//       }
+//     });
+//   });
+
+//   revealTransition().then(() => {
+//     gsap.set(".block", { visibility: "hidden" });
+//   });
+
+//   function revealTransition() {
+//     return new Promise((resolve) => {
+//       gsap.set(".block", { scaleY: 1 });
+//       gsap.to(".block", {
+//         scaleY: 0,
+//         duration: 1,
+//         stagger: {
+//           each: 0.1,
+//           from: "start",
+//           grid: [2, 5],
+//           axis: "x",
+//         },
+//         ease: ease,
+//         onComplete: resolve,
+//       });
+//     });
+//   }
+
+//   function animateTransition() {
+//     return new Promise((resolve) => {
+//       gsap.set(".block", { visibility: "visible", scaleY: 0 });
+//       gsap.to(".block", {
+//         scaleY: 1,
+//         duration: 1,
+//         stagger: {
+//           each: 0.1,
+//           from: "start",
+//           grid: [2, 5],
+//           axis: "x",
+//         },
+//         ease: ease,
+//         onComplete: resolve,
+//       });
+//     });
+//   }
+// });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
@@ -53,21 +112,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const animateFromSide = (selector, fromX, toX) => {
   gsap.fromTo(
-    selector,  // Target element
+    selector,  
     {
-      opacity: 0,   // Start from invisible
-      x: fromX,     // Start from off-screen (left or right)
+      opacity: 0,   
+      x: fromX,   
     },
     {
-      opacity: 1,   // Fade in to full opacity
-      x: toX,       // End at original position (center)
-      duration: 1.5,   // Duration of animation (smooth)
-      ease: 'power3.out', // Smooth easing
-      delay: 0.4,    // Small delay for smoother staggered effect
+      opacity: 1,  
+      x: toX,       
+      duration: 1.5,   
+      ease: 'power3.out', 
+      delay: 0.4,    
       scrollTrigger: {
-        trigger: selector, // Trigger the animation when the element comes into view
-        start: 'top 80%',   // Start when the top of the element is 80% from the top of the viewport
-        toggleActions: 'play none none none', // Play animation when triggered
+        trigger: selector,
+        start: 'top 80%',  
+        toggleActions: 'play none none none', 
       },
     }
   );
