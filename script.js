@@ -212,6 +212,37 @@ gsap.fromTo(
   }
 );
 
+// Check for mobile viewport
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+// Adjust animation properties for mobile
+gsap.fromTo(
+  ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+  {
+    scale: 0.8,
+    opacity: 0,
+    transformOrigin: 'center center',
+  },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: isMobile ? 0.4 : 0.6, // Faster animation for mobile
+    ease: 'power2.out',
+    stagger: (index, total) => {
+      if (index >= 4) {
+        return isMobile ? 0.15 * (index - 3) : 0.3 * (index - 3); // Faster stagger for mobile
+      }
+      return isMobile ? 0.1 : 0.15; // Adjust stagger for mobile
+    },
+    scrollTrigger: {
+      trigger: '.container1',
+      start: 'top 80%',
+      toggleActions: 'play none none none',
+    },
+  }
+);
+
+
 gsap.fromTo(
   '.join',
   {
