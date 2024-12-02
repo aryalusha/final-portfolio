@@ -132,10 +132,8 @@ const animateFromSide = (selector, fromX, toX) => {
   );
 };
 
-// Animate .leftContainer from left
 animateFromSide('.leftContainer', 120, 0);
 
-// Animate .aboutMe from right
 animateFromSide('.aboutMe', -120, 0);
 
 
@@ -145,7 +143,7 @@ animateFromSide('.aboutMe', -120, 0);
 document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
     link.addEventListener("click", event => {
       event.preventDefault();
-      const targetId = event.target.getAttribute("href").substring(1);
+      const targetId = event.currentTarget.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
       
   
@@ -156,28 +154,30 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
     });
   });
   
+  
   window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("#ContentProjects section");
-    const sidebarLinks = document.querySelectorAll(".sidebar nav ul li a");
-
+    const sidebarLinks = document.querySelectorAll("#sidebar nav ul li a");
   
     let currentSectionId = "";
-
   
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 50; 
       const sectionHeight = section.offsetHeight;
   
+      console.log(`Section ${section.id}: Top=${sectionTop}, Height=${sectionHeight}`);
+  
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
         currentSectionId = section.getAttribute("id");
         section.querySelector("h3").classList.add("highlight-heading");
         section.classList.add("active-section");
-      }
-      else {
-        section.classList.remove("active-section"); 
+      } else {
+        section.classList.remove("active-section");
         section.querySelector("h3").classList.remove("highlight-heading");
-    }
+      }
     });
+  
+    console.log(`Current Section: ${currentSectionId}`);
   
     sidebarLinks.forEach(link => {
       link.classList.remove("active");
@@ -186,7 +186,7 @@ document.querySelectorAll(".sidebar nav ul li a").forEach(link => {
       }
     });
   });
-
+  
 
   const nextProjectButton = document.querySelector(".next-project");
 if (nextProjectButton) {
