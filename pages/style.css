@@ -1763,81 +1763,83 @@ h7{
     flex-direction: row-reverse;
 }
 
-.sidebar {
+.container 
+
+
+#sidebar {
     border-left: 1px solid #282829;
-    width: 40%;
-    padding: 4px 0px 10px 28px;
+    width: 200px;
+    padding: 4px 28px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
-    flex: 0 0 200px;
     align-self: flex-start;
     background-color: transparent;
     position: sticky;
-    right: 0;
+    top: 0; 
 }
-  
-.sidebar nav ul {
+
+
+
+#sidebar nav ul {
     list-style: none;
     padding: 0;
 }
   
-.sidebar nav ul li {
+#sidebar nav ul li {
     margin: 15px 0;
 }
   
-.sidebar nav ul li a {
+#sidebar nav ul li a {
     text-decoration: none;
     color: #808080;
     font-weight: 400;
     font-size: 14px;
-
 }
 
-.sidebar nav ul li a:hover {
+#sidebar nav ul li a:hover {
     text-decoration: none;
     color: #c5c5c5;
 
 }
 
-.sidebar nav ul li a.active {
-    color: rgb(255, 255, 255); 
-    font-weight: bold;
+#sidebar nav ul li a.active {
+    color: white !important;
+    font-weight: bold !important;
 }
-
 
 .itemsContainer {
     padding: 80px 140px 40px 190px;
     display: flex;
     flex-direction: row;
-    flex-direction: row-reverse;
-    
+    flex-direction: row-reverse;   
 }
   
 section {
     margin-bottom: 30px;
 }
 
-#ContentProjects{
+#contentProjects{
     display: flex;
     flex-direction: column;
     margin-top: 0px;
     width: 100%;
     gap: 3em;
-    flex: 4; 
+    flex: 1; 
 }
 
-#ContentProjects section {
-    opacity: 1;
+#contentProjects section {
+    opacity: 0.8;
     transition: opacity 0.3s ease;
 }
 
-#ContentProjects .section.active-section {
+
+#contentProjects .section.active-section {
     opacity: 1; 
 }
 
-#ContentProjects h3{
+#contentProjects h3{
     font-size: 1.4em;
     width: 20em;
     margin-top: 16px;
@@ -1845,13 +1847,13 @@ section {
     font-weight: 600;
 }
 
-#ContentProjects h3.highlight-heading {
+#contentProjects h3.highlight-heading {
     color: white;  
     opacity: 1; 
 }
 
 
-#ContentProjects p{
+#contentProjects p{
     margin-top: 2.4em;
     height: auto;
     flex-shrink: 0;
