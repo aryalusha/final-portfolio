@@ -5,6 +5,7 @@
     font-family: Manrope,sans-serif;
 }
 
+
 html, body {
     overflow-x: hidden; 
     width: 100%;        
@@ -67,7 +68,6 @@ body{
     display: flex;
     gap: 17em;
 }
-
 
 .logo {
     width: auto;
@@ -233,8 +233,6 @@ button:hover {
     background: url("assets/hero.png") center/cover no-repeat;
 }
 
-
-
 .work{
     display: flex;
     flex-direction: column;
@@ -334,7 +332,7 @@ h3{
 }
 
 .propertyImage{
-    width: 537px;
+    width: 538px;
     height: 620px;
     background-size: cover;
     background-position: center;
@@ -343,15 +341,15 @@ h3{
 }
 
 .teaImg{
-    background-image: url('assets/tea.jpg');
+    background-image: url('assets/teaLaptop1.jpg');
 }
 
 .accountImg{
-    background-image: url('assets/accounting.jpg');
+    background-image: url('assets/accounting1.jpg');
 }
 
 .influencerImg{
-    background-image: url('assets/influencer.jpg');
+    background-image: url('assets/influencer1.jpg');
 }
 
 .teaText{
@@ -802,20 +800,47 @@ h7{
 .bar {
     height: 2.2px;
     width: 80%;
-    /* width: 28px; */
     background-color: #636060; 
     margin: 2px 0; 
     transition: all 0.3s ease;
 }
 
-#navLeft{
+
+.transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15em;
+    flex-direction: column;
+    z-index: 100;
+    pointer-events: none;
 }
 
+.transition-row {
+    flex: 1;
+    display: flex;
+}
 
+#content {
+    display: none;
+}
+
+.transition-row.row-1 .block{
+    transform-origin: top;
+}
+
+.transition-row.row-2 .block{
+    transform-origin: bottom;
+}
+
+.block {
+    flex: 1;
+    background-color: rgb(79, 79, 79);
+    transform: scaleY(1);
+    will-change: transform;
+}
 
 
 @media (max-width: 1199px){
