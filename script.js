@@ -212,34 +212,31 @@ gsap.fromTo(
   }
 );
 
-// Check for mobile viewport
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-gsap.fromTo(
-  ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
-  {
-    scale: 0.8,
-    opacity: 0,
-    transformOrigin: 'center center',
-  },
-  {
-    scale: 1,
-    opacity: 1,
-    duration: isMobile ? 0.15 : 0.3, 
-    ease: 'power2.out',
-    stagger: (index, total) => {
-      if (index >= 4) {
-        return isMobile ? 0.1 * (index - 3) : 0.2 * (index - 3);
-      }
-      return isMobile ? 0.05 : 0.1; 
+if (isMobile) {
+
+  gsap.fromTo(
+    ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+    {
+      scale: 0.8,
+      opacity: 0,
+      transformOrigin: 'center center',
     },
-    scrollTrigger: {
-      trigger: '.container1',
-      start: 'top 80%',
-      toggleActions: 'play none none none',
-    },
-  }
-);
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.15,
+      ease: 'power2.out',
+      stagger: (index) => 0.05 * index,
+      scrollTrigger: {
+        trigger: '.container1',
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      },
+    }
+  );
+}
+
 
 gsap.fromTo(
   '.join',
