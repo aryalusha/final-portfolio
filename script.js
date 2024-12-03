@@ -226,13 +226,13 @@ gsap.fromTo(
   {
     scale: 1,
     opacity: 1,
-    duration: isMobile ? 0.4 : 0.6, // Faster animation for mobile
+    duration: isMobile ? 0.2 : 0.4, 
     ease: 'power2.out',
     stagger: (index, total) => {
       if (index >= 4) {
-        return isMobile ? 0.15 * (index - 3) : 0.3 * (index - 3); // Faster stagger for mobile
+        return isMobile ? 0.15 * (index - 3) : 0.3 * (index - 3); 
       }
-      return isMobile ? 0.1 : 0.15; // Adjust stagger for mobile
+      return isMobile ? 0.1 : 0.15; 
     },
     scrollTrigger: {
       trigger: '.container1',
