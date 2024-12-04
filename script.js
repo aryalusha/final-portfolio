@@ -252,7 +252,7 @@ if (isMobile) {
     {
       scale: 1,
       opacity: 1,
-      duration: 0.10,
+      duration: 0.08,
       ease: 'power2.out',
       stagger: (index) => 0.05 * index,
       scrollTrigger: {
