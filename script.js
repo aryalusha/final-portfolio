@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   
   revealTransition().then(() => {
-    gsap.set(".block",  {visiblity: "hidden"});
+    gsap.set(".block",  {visibility: "hidden"});
   });
 
   function revealTransition() {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function animateTransition(){
     return new Promise((resolve) => {
-      gsap.set(".block", {visiblity: "visible", scaleY: 0});
+      gsap.set(".block", {visibility: "visible", scaleY: 0});
       gsap.to(".block", {
         scaleY: 1, 
         duration: 1, 
@@ -186,35 +186,62 @@ gsap.fromTo('.subContainer',
 );
 
 
+// gsap.fromTo(
+//   ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+//   {
+//     scale: 0.8,
+//     opacity: 0, 
+//     transformOrigin: 'center center', 
+//   },
+//   {
+//     scale: 1, 
+//     opacity: 1, 
+//     duration: 2, 
+//     ease: 'power4.out', 
+//     stagger: (index, total) => {
+//       if (index >= 4) {
+//         return 0.4 * (index - 3); 
+//       }
+//       return 0.15; 
+//     },
+//     scrollTrigger: {
+//       trigger: '.container1',
+//       start: 'top 80%', 
+//       toggleActions: 'play none none none', 
+//     },
+//   }
+// );
+
+
 gsap.fromTo(
   ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
   {
     scale: 0.8,
     opacity: 0, 
-    transformOrigin: 'center center', 
+    visibility: 'hidden',  
+    transformOrigin: 'center center',
   },
   {
     scale: 1, 
     opacity: 1, 
-    duration: 0.6, 
-    ease: 'power2.out', 
-    stagger: (index, total) => {
-      if (index >= 4) {
-        return 0.3 * (index - 3); 
-      }
-      return 0.15; 
+    visibility: 'visible',  
+    duration: 2.6, 
+    ease: 'power3.out', 
+    stagger: (index) => {
+      return index * 0.4;  
     },
     scrollTrigger: {
       trigger: '.container1',
       start: 'top 80%', 
-      toggleActions: 'play none none none', 
+      toggleActions: 'play none none none',
     },
   }
 );
 
 
-if (isMobile) {
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
+if (isMobile) {
   gsap.fromTo(
     ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
     {
@@ -225,7 +252,7 @@ if (isMobile) {
     {
       scale: 1,
       opacity: 1,
-      duration: 0.15,
+      duration: 0.10,
       ease: 'power2.out',
       stagger: (index) => 0.05 * index,
       scrollTrigger: {
@@ -236,6 +263,7 @@ if (isMobile) {
     }
   );
 }
+
 
 
 gsap.fromTo(
@@ -258,24 +286,28 @@ gsap.fromTo(
 );
 
 
-const nav = document.querySelector(".mainHead");
-window.addEventListener( 'scroll', function(){
-    if(this.scrollY > 200){
-        mainHead.classList.add('slidedown');
-    }
-})
-
 
 document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLeft = document.querySelector('.navLeft');
-  
-  console.log(menuToggle); 
-  console.log(navLeft); 
+  const nav = document.querySelector('.mainHead'); 
+  const menuToggle = document.querySelector('.menu-toggle'); 
+  const navLeft = document.querySelector('.navLeft'); 
 
-  menuToggle.addEventListener('click', () => {
-      navLeft.classList.toggle('active');
-      menuToggle.classList.toggle('open');
-      console.log('Menu toggled!'); 
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+          nav.classList.add('slidedown');
+      } else {
+          nav.classList.remove('slidedown');
+      }
   });
+
+  if (menuToggle && navLeft) { 
+      menuToggle.addEventListener('click', () => {
+          navLeft.classList.toggle('active'); 
+          menuToggle.classList.toggle('open'); 
+          console.log('Menu toggled!');
+      });
+  } else {
+      console.error('menuToggle or navLeft elements are missing.');
+  }
 });
+

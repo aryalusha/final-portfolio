@@ -1,5 +1,4 @@
 
-
 *{
     margin: 0;
     font-family: Manrope,sans-serif;
@@ -34,6 +33,8 @@ body{
     align-self: stretch;
     height: 960px;
 }
+
+
 
 .navContainer{
     width: 1320px;
@@ -712,6 +713,8 @@ h6{
     font-weight: 600;
     color: #c3c3cc;
     text-decoration: none;
+    position: relative;
+    z-index: 99999;
 }
 
 
@@ -843,14 +846,20 @@ h7{
 }
 
 
-@media (max-width: 1199px){
 
+@media (max-width: 1199px){
+    
     .background {
         background: url("assets/responsive\ background.jpg") center/cover no-repeat;
         height: 900px;
         width: 100%;
         z-index: -10;
         position: relative;
+    }
+
+    .button{
+        position: relative;
+        z-index: 1000;
     }
 
     .menu-toggle {
@@ -954,6 +963,11 @@ h7{
 
     .fullSec{
         padding: 30px 160px;
+    }
+
+    .fullSec .joinBtn{
+        position: relative;
+        z-index: 10000;
     }
     
 
@@ -1590,8 +1604,8 @@ h7{
         flex-direction: column;
         gap: 5px;
         position: relative;
-        z-index: 10; /* Ensure it is above other elements */
-        width: 30px; /* Adjust as needed */
+        z-index: 10; 
+        width: 30px; 
         height: 30px;
     }
 
@@ -1624,7 +1638,7 @@ h7{
     }
 
     .menu-toggle.open .bar:nth-child(2) {
-        opacity: 0; /* Hide the middle bar */
+        opacity: 0; 
     }
 
     .menu-toggle.open .bar:nth-child(3) {
@@ -1679,10 +1693,6 @@ h7{
 
     }
 
-    #cvDownload_nav{
-        height: 3em;
-        width: 9em;
-    }
 
     button{
         height: 2.4em;
@@ -2014,6 +2024,7 @@ h7{
 }
 
 @media only screen and (max-width: 375px){
+    
     .background {
         background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
         height: 670px;
@@ -2025,6 +2036,7 @@ h7{
         margin-top: 8px;
         gap: 30vw;
         margin-bottom: 70px;
+        z-index: 100;
     }
 
 
@@ -2120,9 +2132,9 @@ h7{
         gap: 18px;
     }
 
-    #cvDownload_nav{
-        height: 3em;
-        width: 9em;
+    #cvDownload_nav {
+        position: relative;
+        z-index: 9999;
     }
 
     button{
