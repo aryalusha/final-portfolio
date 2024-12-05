@@ -225,10 +225,10 @@ gsap.fromTo(
     scale: 1, 
     opacity: 1, 
     visibility: 'visible',  
-    duration: 2.1, 
+    duration: 1.8, 
     ease: 'power3.out', 
     stagger: (index) => {
-      return index * 0.4;  
+      return index * 0.3;  
     },
     scrollTrigger: {
       trigger: '.container1',
@@ -239,30 +239,63 @@ gsap.fromTo(
 );
 
 
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+// const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-if (isMobile) {
-  gsap.fromTo(
-    ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
-    {
-      scale: 0.9,
-      opacity: 0,
-      transformOrigin: 'center center',
-    },
-    {
-      scale: 1,
-      opacity: 1,
-      duration: 1,
-      ease: 'power3.out',
-      stagger: (index) => 0.03 * index,
-      scrollTrigger: {
-        trigger: '.container1',
-        start: 'top 80%',
-        toggleActions: 'play none none none',
+// if (isMobile) {
+//   gsap.fromTo(
+//     ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+//     {
+//       scale: 0.9,
+//       opacity: 0,
+//       transformOrigin: 'center center',
+//     },
+//     {
+//       scale: 1,
+//       opacity: 1,
+//       duration: 1,
+//       ease: 'power3.out',
+//       stagger: (index) => 0.03 * index,
+//       scrollTrigger: {
+//         trigger: '.container1',
+//         start: 'top 80%',
+//         toggleActions: 'play none none none',
+//       },
+//     }
+//   );
+// }
+
+
+// Ensure GSAP and ScrollTrigger are loaded before this code is executed.
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    gsap.fromTo(
+      ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+      {
+        scale: 0.9,
+        opacity: 0,
+        transformOrigin: 'center center',
       },
-    }
-  );
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: (index) => 0.03 * index,
+        scrollTrigger: {
+          trigger: '.container1',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+          onEnter: () => console.log('ScrollTrigger activated')
+        },
+      }
+    );
+  }
+} else {
+  console.error('GSAP or ScrollTrigger is not loaded.');
 }
+
 
 
 
