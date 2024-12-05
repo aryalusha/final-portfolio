@@ -225,7 +225,7 @@ gsap.fromTo(
     scale: 1, 
     opacity: 1, 
     visibility: 'visible',  
-    duration: 2.6, 
+    duration: 2.1, 
     ease: 'power3.out', 
     stagger: (index) => {
       return index * 0.4;  
@@ -245,16 +245,16 @@ if (isMobile) {
   gsap.fromTo(
     ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
     {
-      scale: 0.8,
+      scale: 0.9,
       opacity: 0,
       transformOrigin: 'center center',
     },
     {
       scale: 1,
       opacity: 1,
-      duration: 0.08,
-      ease: 'power2.out',
-      stagger: (index) => 0.05 * index,
+      duration: 1,
+      ease: 'power3.out',
+      stagger: (index) => 0.03 * index,
       scrollTrigger: {
         trigger: '.container1',
         start: 'top 80%',
@@ -310,4 +310,66 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('menuToggle or navLeft elements are missing.');
   }
 });
+
+
+
+document.getElementById("cvDownload_nav").addEventListener("click", async (event) => {
+  event.preventDefault();
+  try {
+      console.log("Downloading the CV...");
+      await downloadCV();
+  } catch (error) {
+      console.error("Download failed", error);
+  }
+});
+
+async function downloadCV() {
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          console.log("Download complete!");
+          resolve();
+      }, 1000);
+  });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cvButton = document.getElementById("cvDownload_nav");
+
+  if (cvButton) {
+      cvButton.addEventListener("click", (event) => {
+          event.preventDefault(); 
+
+          const pdfURL = "assets/Usha_cv.pdf";
+
+          console.log("Opening in new tab...");
+          window.open(pdfURL, "_blank");
+
+          console.log("Starting download...");
+          downloadPDF(pdfURL);
+      });
+  } else {
+      console.error("CV button not found.");
+  }
+
+  
+  function downloadPDF(url) {
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Usha_cv.pdf"; 
+      document.body.appendChild(link); 
+      link.click(); 
+      document.body.removeChild(link); 
+  }
+});
+
+
+
+
+
+
+
+
+
 

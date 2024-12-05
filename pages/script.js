@@ -58,7 +58,6 @@
 // });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLeft = document.querySelector("#navLeft");
@@ -80,6 +79,34 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Menu toggle or navLeft element is missing in the DOM.");
   }
 });
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const menuToggle = document.querySelector(".menu-toggle");
+//   const navLeft = document.querySelector("#navLeft");
+
+//   if (menuToggle && navLeft) {
+//       menuToggle.addEventListener("click", function () {
+//           menuToggle.classList.toggle("open");
+//           navLeft.classList.toggle("active");
+//       });
+
+//       navLeft.addEventListener("click", function (event) {
+//           if (event.target.tagName === "A") {
+//               console.log("Closing menu...");
+//               menuToggle.classList.remove("open");
+//               navLeft.classList.remove("active");
+//           }
+//       });
+//   } else {
+//       console.error("Menu toggle or navLeft element is missing in the DOM.");
+//   }
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
   if (!window.location.pathname.includes('index.html')) {
