@@ -198,7 +198,7 @@ gsap.fromTo(
     scale: 1, 
     opacity: 1, 
     visibility: 'visible',  
-    duration: 1.8, 
+    duration: 1.4, 
     ease: 'power3.out', 
     stagger: (index) => {
       return index * 0.3;  
