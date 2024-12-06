@@ -18,7 +18,7 @@ body{
 
 
 .background {
-    background: url("assets/gradient2.png") center/cover no-repeat;
+    background: url("assets/front1.png") center/cover no-repeat;
     height: 980px;
     margin: 0;
 }
@@ -161,7 +161,7 @@ body{
 
 
 h1{
-    background: linear-gradient(99deg, hsl(0, 5%, 93%) 8.67%, #858282 57.95%, #2c2c2e 96.71%);
+    background: linear-gradient(99deg, hsl(0, 2%, 91%) 8.67%, #858282 57.95%, #2c2c2e 97.71%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -460,14 +460,14 @@ h4{
 }
 
 .aboutMe{
-    background: url("assets/me.png") center/cover no-repeat;
+    background: url("assets/me.jpg") center/cover no-repeat;
     width: 310.148px;
     height: 450px;
     border-radius: 15px;
 }
 
 .img{
-    background: url("assets/about\ gradient.jpg") center/cover no-repeat;
+    background: url("assets/gradient.png") center/cover no-repeat;
     height: 680px;
     width: 100%;
     display: flex;
