@@ -186,33 +186,6 @@ gsap.fromTo('.subContainer',
 );
 
 
-// gsap.fromTo(
-//   ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
-//   {
-//     scale: 0.8,
-//     opacity: 0, 
-//     transformOrigin: 'center center', 
-//   },
-//   {
-//     scale: 1, 
-//     opacity: 1, 
-//     duration: 2, 
-//     ease: 'power4.out', 
-//     stagger: (index, total) => {
-//       if (index >= 4) {
-//         return 0.4 * (index - 3); 
-//       }
-//       return 0.15; 
-//     },
-//     scrollTrigger: {
-//       trigger: '.container1',
-//       start: 'top 80%', 
-//       toggleActions: 'play none none none', 
-//     },
-//   }
-// );
-
-
 gsap.fromTo(
   ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
   {
@@ -239,33 +212,6 @@ gsap.fromTo(
 );
 
 
-// const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-// if (isMobile) {
-//   gsap.fromTo(
-//     ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
-//     {
-//       scale: 0.9,
-//       opacity: 0,
-//       transformOrigin: 'center center',
-//     },
-//     {
-//       scale: 1,
-//       opacity: 1,
-//       duration: 1,
-//       ease: 'power3.out',
-//       stagger: (index) => 0.03 * index,
-//       scrollTrigger: {
-//         trigger: '.container1',
-//         start: 'top 80%',
-//         toggleActions: 'play none none none',
-//       },
-//     }
-//   );
-// }
-
-
-// Ensure GSAP and ScrollTrigger are loaded before this code is executed.
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
@@ -281,8 +227,8 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         scale: 1,
         opacity: 1,
         duration: 1,
-        ease: 'power3.out',
-        stagger: (index) => 0.03 * index,
+        ease: 'power2.out',
+        stagger: (index) => 0.02 * index,
         scrollTrigger: {
           trigger: '.container1',
           start: 'top 80%',
@@ -295,8 +241,6 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 } else {
   console.error('GSAP or ScrollTrigger is not loaded.');
 }
-
-
 
 
 gsap.fromTo(

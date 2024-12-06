@@ -212,6 +212,16 @@ button{
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.transition, .background {
+    pointer-events: auto;
+}
+
+.paragraphTop .upperText{
+    position: relative;
 }
 
 
@@ -457,7 +467,7 @@ h4{
 }
 
 .img{
-    background: url("assets/about\ gradient.png") center/cover no-repeat;
+    background: url("assets/about\ gradient.jpg") center/cover no-repeat;
     height: 680px;
     width: 100%;
     display: flex;
@@ -852,19 +862,18 @@ h7{
         background: url("assets/responsive\ background.jpg") center/cover no-repeat;
         height: 900px;
         width: 100%;
-        z-index: -10;
         position: relative;
     }
+
 
     .menu-toggle {
         gap: 5px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        gap: 5px;
         position: relative;
-        z-index: 10; 
-        width: 30px; 
+        z-index: 9999; 
+        width: 30px;
         height: 30px;
     }
 
@@ -891,6 +900,14 @@ h7{
         display: none; 
     }
 
+    .mainHead {
+        position: relative; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
     .mainHead .nav{
         justify-content: space-around;
         align-items: center;
@@ -909,7 +926,7 @@ h7{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        z-index: 100;
+        z-index: 99999;
         height: 100vh;
         padding-top: 60px;
     }
@@ -942,26 +959,12 @@ h7{
         display: flex; 
     }
 
-
-    .menu-toggle {
-        gap: 5px;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        position: relative;
-        z-index: 10; 
-        width: 30px;
-        height: 30px;
-    }
-
     .fullSec{
         padding: 30px 160px;
     }
 
     .fullSec .joinBtn{
         position: relative;
-        z-index: 10000;
     }
     
 
@@ -970,17 +973,14 @@ h7{
         justify-content: center;
         text-align: center;
         gap: 2.1em;
-        z-index: 0;
     }
-
-    
+ 
     h1{
         font-size: 3em;
         height: auto;
         justify-content: space-around;
     }
    
-
     p{
         display: none;
     }
@@ -1000,7 +1000,6 @@ h7{
         margin-bottom: 0em;
         height: auto;
         object-fit: cover;
-        z-index: -1;
     }
 
     h2{
@@ -1067,7 +1066,6 @@ h7{
     .accountImg{
         margin-right: 30px;
         margin-left: 30px;
-        
     }
 
     .skillText{
@@ -1176,7 +1174,6 @@ h7{
         gap:750px;
     }
 
-
     .img3{
         width: 35vw;
     }
@@ -1241,7 +1238,6 @@ h7{
         width: 100vw;
     }
 
-    
     .menu-toggle {
         gap: 5px;
         cursor: pointer;
@@ -1249,8 +1245,8 @@ h7{
         flex-direction: column;
         gap: 5px;
         position: relative;
-        z-index: 10; /* Ensure it is above other elements */
-        width: 30px; /* Adjust as needed */
+        z-index: 1001;
+        width: 30px; 
         height: 30px;
         
     }
@@ -1285,7 +1281,7 @@ h7{
     }
 
     .menu-toggle.open .bar:nth-child(2) {
-        opacity: 0; /* Hide the middle bar */
+        opacity: 0;
     }
 
     .menu-toggle.open .bar:nth-child(3) {
@@ -1296,7 +1292,6 @@ h7{
         justify-content: space-around;
         margin-bottom: 5em;
     }
-
 
     .nav_list {
         flex-direction: column;
@@ -1520,7 +1515,6 @@ h7{
 
     h6{
         font-size: 16px;
-        
     }
 
     .img3{
@@ -1582,9 +1576,6 @@ h7{
         gap: 20px;
         width: 100%;
     }
-
-
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -1592,8 +1583,8 @@ h7{
         background: url("assets/responsive\ mobile.jpg") center/cover no-repeat;
         height: 700px;
         width: 100%;
-
     }
+
     .menu-toggle {
         gap: 5px;
         cursor: pointer;
@@ -1687,9 +1678,7 @@ h7{
     .headingText{
         text-align: center;
         align-items: center;
-
     }
-
 
     button{
         height: 2.4em;
@@ -1719,7 +1708,6 @@ h7{
         gap: 80px;
     }
 
-    
     .workAll{
         width: 440px;
         align-items: center;
@@ -1737,7 +1725,6 @@ h7{
         font-size: 0.7em;
     }
     
-
     .work{
         margin-top: 4em;
 
@@ -2026,29 +2013,23 @@ h7{
         background: url("assets/mobile_responsive.jpg") center/cover no-repeat;
         height: 670px;
         width: 100%;
-        z-index: -2;
+        /* z-index: -2; */
     }
 
     .nav{
         margin-top: 8px;
         gap: 30vw;
         margin-bottom: 70px;
-        z-index: 100;
-    }
-
-    #cvDownload_nav {
-        position: relative;  /* Ensure button is positioned */
-        z-index: 9999; /* Ensure it's above other elements */
     }
 
 
     .fullSec{
         padding-top: 140 0px;
-        z-index: -1;
     }
 
     .menu-toggle {
         display: flex;
+        z-index: 1001;
     }
 
     .logo{
@@ -2076,8 +2057,6 @@ h7{
 
     .navLeft.active {
         display: flex;
-        background-color: #3d3d3d;
-        z-index: 9999;
     }
 
     .nav_list {
@@ -2111,7 +2090,6 @@ h7{
     .headingItem{
         padding-left: 16em;
         padding-right: 16em;
-
     }
 
     h1 {
@@ -2164,7 +2142,6 @@ h7{
         align-items: center;
     }
 
-
     .heroImage{
         background: url("assets/mobile_hero.png") center/cover no-repeat;
         margin-top: 1em;
@@ -2174,7 +2151,6 @@ h7{
         height: auto;
         object-fit: cover;
     }
-
 
     .workContainer{
         gap: 76px;
@@ -2198,8 +2174,6 @@ h7{
         margin-bottom: 0px;
         width: 100vw;
     }
-
-
 
     h3{
         font-size: 1.1em;
@@ -2230,7 +2204,6 @@ h7{
     .accountImg{
         margin-right: 30px;
         margin-left: 30px;
-        
     }
 
     .skillText{
@@ -2249,7 +2222,6 @@ h7{
         font-size: 1.3em;
         width: 200px;
         line-height: 150%;
-
     }
 
     .aboutPara{
@@ -2349,11 +2321,11 @@ h7{
         padding: 5px 0px 0px 20px;
     }
 
-
     .container1{
         width: 96%;
         padding: 30px 0px 0px 20px;
     }
+
     .websiteDesign{
         background: url("assets/tab-responsive.jpg") center/cover no-repeat;
         width: 95%;
@@ -2458,6 +2430,5 @@ h7{
         font-size: 0.8em;
         text-align: center;
     }
-
 
 }
