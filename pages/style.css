@@ -273,7 +273,7 @@ button:hover {
 }
 
 .teaImg{
-    background-image: url('assets_pages/tea.jpg');
+    background-image: url('../assets/teaLaptop12.jpg');
     margin-bottom: 22px;
 }
 
@@ -677,7 +677,7 @@ h1{
 }
 
 .websiteDesign{
-    background: url("../assets/website\ &\ design.jpg") center/cover no-repeat;
+    background: url("../assets/websiteDesign.jpg") center/cover no-repeat;
     width: 300px;
     height: 360px;
     border-radius: 18px;
@@ -736,7 +736,7 @@ h6{
 }
 
 .softwareImg{
-    background: url("../assets/Software.jpg") center/cover no-repeat;
+    background: url("../assets/Software1.jpg") center/cover no-repeat;
     width: 489px;
     height: 147px;
     border-radius: 20px;
@@ -756,7 +756,7 @@ h6{
 }
 
 .webappImg{
-    background: url("../assets/webapp.jpg") center/cover no-repeat;
+    background: url("../assets/webapp1.jpg") center/cover no-repeat;
     width: 230px;
     height: 148px;
     border-radius: 20px;
@@ -780,7 +780,7 @@ h6{
 }
 
 .protoImg{
-    background: url("../assets/prototyping.jpg") center/cover no-repeat;
+    background: url("../assets/prototyping1.jpg") center/cover no-repeat;
     width: 310px;
     height: 166px;
     border-radius: 20px;
@@ -799,7 +799,7 @@ h6{
 }
 
 .flowImg{
-    background: url("../assets/userflow.jpg") center/cover no-repeat;
+    background: url("../assets/userflow1.jpg") center/cover no-repeat;
     width: 418px;
     height: 170px;
     border-radius: 20px;
@@ -819,7 +819,7 @@ h6{
 }
 
 .styleguideImg{
-    background: url("../assets/styleguide.jpg") center/cover no-repeat;
+    background: url("../assets/styleguide1.jpg") center/cover no-repeat;
     width: 428px;
     height: 142px;
     border-radius: 20px;
@@ -840,7 +840,7 @@ h6{
 }
 
 .brandingImg{
-    background: url("../assets/branding.jpg") center/cover no-repeat;
+    background: url("../assets/branding1.jpg") center/cover no-repeat;
     width: 298px;
     height: 148px;
     border-radius: 20px;

@@ -226,7 +226,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       {
         scale: 1,
         opacity: 1,
-        duration: 1,
+        duration: 0.2, 
         ease: 'power2.out',
         stagger: (index) => 0.02 * index,
         scrollTrigger: {
@@ -241,6 +241,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 } else {
   console.error('GSAP or ScrollTrigger is not loaded.');
 }
+
 
 
 gsap.fromTo(
@@ -261,6 +262,28 @@ gsap.fromTo(
     },
   }
 );
+
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+gsap.fromTo(
+  '.join',
+  {
+    opacity: 0, 
+    y: 100, 
+  },
+  {
+    opacity: 1,
+    y: 0, 
+    duration: isMobile ? 2 : 1, 
+    ease: 'power2.out', 
+    scrollTrigger: {
+      trigger: '.join', 
+      start: 'top 80%',
+      toggleActions: 'play none none none', 
+    },
+  }
+);
+
 
 
 
