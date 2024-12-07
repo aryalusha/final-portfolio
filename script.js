@@ -186,104 +186,65 @@ gsap.fromTo('.subContainer',
 );
 
 
-gsap.fromTo(
-  ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
-  {
-    scale: 0.8,
-    opacity: 0, 
-    visibility: 'hidden',  
-    transformOrigin: 'center center',
-  },
-  {
-    scale: 1, 
-    opacity: 1, 
-    visibility: 'visible',  
-    duration: 1.4, 
-    ease: 'power3.out', 
-    stagger: (index) => {
-      return index * 0.28;  
-    },
-    scrollTrigger: {
-      trigger: '.container1',
-      start: 'top 80%', 
-      toggleActions: 'play none none none',
-    },
+
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+  const isMobile = window.innerWidth < 1200;
+
+  if (!isMobile) { 
+    gsap.fromTo(
+      ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
+      {
+        scale: 0.8,
+        opacity: 0, 
+        visibility: 'hidden',  
+        transformOrigin: 'center center',
+      },
+      {
+        scale: 1, 
+        opacity: 1, 
+        visibility: 'visible',  
+        duration: 1.4, 
+        ease: 'power3.out', 
+        stagger: (index) => {
+          return index * 0.24;  
+        },
+        scrollTrigger: {
+          trigger: '.container1',
+          start: 'top 80%', 
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  } else {
+    console.log('Animations skipped on smaller devices with screen width < 1200px.');
   }
-);
+}
 
 
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-  if (isMobile) {
-    gsap.fromTo(
-      ['.container1', '.softwareContainer', '.img2', '.img3', '.img4', '.img5', '.img6', '.img7'],
-      {
-        scale: 0.9,
-        opacity: 0,
-        transformOrigin: 'center center',
+  gsap.fromTo(
+    '.join',
+    {
+      opacity: 0, 
+      y: 100, 
+    },
+    {
+      opacity: 1,
+      y: 0, 
+      duration: isMobile ? 2 : 1, 
+      ease: 'power2.out', 
+      scrollTrigger: {
+        trigger: '.join', 
+        start: 'top 80%',
+        toggleActions: 'play none none none', 
       },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.2, 
-        ease: 'power2.out',
-        stagger: (index) => 0.02 * index,
-        scrollTrigger: {
-          trigger: '.container1',
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-          onEnter: () => console.log('ScrollTrigger activated')
-        },
-      }
-    );
-  }
+    }
+  );
 } else {
   console.error('GSAP or ScrollTrigger is not loaded.');
 }
-
-
-
-gsap.fromTo(
-  '.join',
-  {
-    opacity: 0, 
-    y: 100, 
-  },
-  {
-    opacity: 1,
-    y: 0, 
-    duration: 1, 
-    ease: 'power2.out', 
-    scrollTrigger: {
-      trigger: '.join', 
-      start: 'top 80%',
-      toggleActions: 'play none none none', 
-    },
-  }
-);
-
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-gsap.fromTo(
-  '.join',
-  {
-    opacity: 0, 
-    y: 100, 
-  },
-  {
-    opacity: 1,
-    y: 0, 
-    duration: isMobile ? 2 : 1, 
-    ease: 'power2.out', 
-    scrollTrigger: {
-      trigger: '.join', 
-      start: 'top 80%',
-      toggleActions: 'play none none none', 
-    },
-  }
-);
-
 
 
 
