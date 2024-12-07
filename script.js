@@ -201,7 +201,7 @@ gsap.fromTo(
     duration: 1.4, 
     ease: 'power3.out', 
     stagger: (index) => {
-      return index * 0.3;  
+      return index * 0.28;  
     },
     scrollTrigger: {
       trigger: '.container1',
