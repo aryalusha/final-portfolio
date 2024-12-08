@@ -228,18 +228,17 @@ document.addEventListener("DOMContentLoaded", function () {
     return emailRegex.test(email);
   }
 
-  submitButton.addEventListener("click", function () {
+  submitButton.addEventListener("click", async function () {
     const nameValue = fullName.value.trim();
     const emailValue = email.value.trim();
     const messageValue = message.value.trim();
 
-    // Full Name validation
+    // Frontend Validation
     if (!nameValue) {
       errorMessage.innerText = "Full Name is required*";
       return;
     }
 
-    // Email validation
     if (!emailValue) {
       errorMessage.innerText = "Email is required*";
       return;
@@ -255,16 +254,31 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // Clear error message and proceed with sending the form data
     errorMessage.innerText = "";
 
-    alert("Form submitted successfully!");
+    try {
+      const response = await fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: emailValue,
+          subject: `Contact Request from ${nameValue}`,
+          text: messageValue,
+        }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert('Email sent successfully!');
+      } else {
+        alert(result.message || "Failed to send email.");
+      }
+    } catch (error) {
+      console.error('Error: ', error);
+      alert('There was an error sending the email.');
+    }
   });
 });
-
-
-
-
-
-
-
-

@@ -347,18 +347,7 @@ async function downloadPDF(url) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const emailLink = document.getElementById("emailLink");
 
-  if (emailLink) {
-    emailLink.addEventListener("click", (event) => {
-      event.preventDefault(); 
-
-      const mailtoLink = "mailto:u8900038@example.com";
-      window.open(mailtoLink, "_blank");
-    });
-  }
-});
 
 
 
