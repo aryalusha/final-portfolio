@@ -216,16 +216,153 @@ document.addEventListener("DOMContentLoaded", () =>{
     setupTabs();
 });
 
+
+function showLoader() {
+  document.getElementById('loader').style.display = 'flex';
+}
+
+function hideLoader() {
+  document.getElementById('loader').style.display = 'none';
+}
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const submitButton = document.getElementById("submitBtn");
+//   const loader = document.getElementById("loaderBtn");
+//   const fullName = document.getElementById("fullName");
+//   const email = document.getElementById("email");
+//   const message = document.getElementById("message");
+//   const errorMessage = document.getElementById("error-message");
+//   const successPopup = document.getElementById("successPopup");
+
+//   // Function to validate email format
+//   function isValidEmail(email) {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return emailRegex.test(email);
+//   }
+
+//   function showLoader() {
+//     submitButton.classList.add("loading"); // Show loader and hide text
+//   }
+
+//   function hideLoader() {
+//     submitButton.classList.remove("loading"); // Hide loader and show text
+//   }
+
+//   function showSuccessPopup() {
+//     successPopup.style.display = "flex";
+//     setTimeout(() => {
+//       successPopup.style.opacity = "0";
+//       setTimeout(() => {
+//         successPopup.style.display = "none";
+//         successPopup.style.opacity = "1";
+//       }, 400);
+//     }, 2000);
+//   }
+
+//   // Function to clear the input fields
+//   function clearInputs() {
+//     fullName.value = "";
+//     email.value = "";
+//     message.value = "";
+//   }
+
+//   submitButton.addEventListener("click", async function () {
+//     const nameValue = fullName.value.trim();
+//     const emailValue = email.value.trim();
+//     const messageValue = message.value.trim();
+
+//     if (!nameValue) {
+//       errorMessage.innerText = "Full Name is required*";
+//       return;
+//     }
+
+//     if (!emailValue) {
+//       errorMessage.innerText = "Email is required*";
+//       return;
+//     }
+
+//     if (!isValidEmail(emailValue)) {
+//       errorMessage.innerText = "Invalid email address*";
+//       return;
+//     }
+
+//     if (!messageValue) {
+//       errorMessage.innerText = "Message cannot be empty.";
+//       return;
+//     }
+
+//     // Clear error message
+//     errorMessage.innerText = "";
+
+//     try {
+//       // Show loader
+//       showLoader();
+
+//       const response = await fetch('http://localhost:3000/send-email', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify({
+//           fullName: nameValue,
+//           email: emailValue,
+//           message: messageValue,
+//         }),
+//       });
+
+//       const result = await response.json();
+
+//       if (response.ok) {
+//         alert('Email sent successfully!');
+//         // Clear the input fields
+//         clearInputs();
+//       } else {
+//         alert(result.message || "Failed to send email.");
+//       }
+//     } catch (error) {
+//       console.error('Error:', error);
+//       alert('There was an error sending the email.');
+//     } finally {
+//       // Hide loader
+//       hideLoader();
+//     }
+//   });
+// });
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const submitButton = document.getElementById("submitBtn");
   const fullName = document.getElementById("fullName");
   const email = document.getElementById("email");
   const message = document.getElementById("message");
   const errorMessage = document.getElementById("error-message");
+  const loader = document.getElementById("loaderBtn");
+  const successPopup = document.getElementById("successPopup");
 
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+  }
+
+  function showLoader() {
+    loader.style.display = "block";
+    submitButton.classList.add("loading"); // Hide button text
+  }
+
+  function hideLoader() {
+    loader.style.display = "none";
+    submitButton.classList.remove("loading");
+  }
+
+  function showSuccessPopup() {
+    successPopup.style.display = "flex";
+    setTimeout(() => {
+      successPopup.style.opacity = "0";
+      setTimeout(() => {
+        successPopup.style.display = "none";
+        successPopup.style.opacity = "1";
+      }, 400);
+    }, 2000);
   }
 
   submitButton.addEventListener("click", async function () {
@@ -233,7 +370,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailValue = email.value.trim();
     const messageValue = message.value.trim();
 
-    // Frontend Validation
     if (!nameValue) {
       errorMessage.innerText = "Full Name is required*";
       return;
@@ -250,35 +386,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (!messageValue) {
-      errorMessage.innerText = "Message cannot be empty.*";
+      errorMessage.innerText = "Message cannot be empty.";
       return;
     }
 
-    // Clear error message and proceed with sending the form data
     errorMessage.innerText = "";
+    showLoader();
 
     try {
       const response = await fetch('http://localhost:3000/send-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          to: emailValue,
-          subject: `Contact Request from ${nameValue}`,
-          text: messageValue,
+          fullName: nameValue,
+          email: emailValue,
+          message: messageValue,
         }),
       });
 
       const result = await response.json();
+
       if (response.ok) {
-        alert('Email sent successfully!');
+        showSuccessPopup();
+        fullName.value = "";
+        email.value = "";
+        message.value = "";
       } else {
         alert(result.message || "Failed to send email.");
       }
     } catch (error) {
-      console.error('Error: ', error);
-      alert('There was an error sending the email.');
+      alert("There was an error sending the email.");
+    } finally {
+      hideLoader();
     }
   });
 });

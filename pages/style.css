@@ -37,6 +37,38 @@ body{
     height: 40px;
     animation: spin 1s linear infinite;
   }
+
+  .loader-button {
+    display: none; 
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute; 
+    transform: translate(-50%, -50%);
+  }
+
+  #submitBtn {
+    position: relative; 
+  }
+
+  #submitBtn.loading .loader-button {
+    display: block;
+  }
+
+  #btnText {
+    display: block;
+  }
+
+  .loading #btnText {
+    display: none; 
+  }
+  
+  .loading .loader-button {
+    display: block; 
+  }
   
   @keyframes spin {
     from {
@@ -46,6 +78,46 @@ body{
       transform: rotate(360deg);
     }
   }
+
+  .success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #27262b;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: none; 
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    height: 400px;
+    width: 400px;
+}
+
+.iconSucess{
+    background: url("../assets/sucess.png") center/cover no-repeat;
+    height: 300px;
+    width: 300px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text {
+    font-size: 20px;
+    color: #dbdada;
+    font-weight: 600;
+}
   
 
 

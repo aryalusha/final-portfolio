@@ -80,9 +80,19 @@
                 <input type="text" id="fullName" placeholder="Full Name">
                 <input type="email" id="email" placeholder="Email">
                 <textarea placeholder="Message" id="message"></textarea>
-                <button type="submit" id="submitBtn">Submit <span>→</span></button>
+                <!-- <button type="submit" id="submitBtn">Submit <span>→</span></button> -->
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Submit →</span>
+                    <div id="loaderBtn" class="loader-button"></div>
+                  </button>
                 <div id="error-message" style="color: red;"></div>
                 <p>We will reach out to you within 24 hours on workdays.</p>
+            </div>
+            <div id="successPopup" class="success-popup">
+                <div class="popup-content">
+                    <div class="iconSucess"> </div>
+                    <div class="text">Submitted Successfully</div>
+                </div>
             </div>
         </div>
     </div>
