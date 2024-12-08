@@ -278,58 +278,87 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-document.getElementById("cvDownload_nav").addEventListener("click", async (event) => {
-  event.preventDefault();
-  try {
-      console.log("Downloading the CV...");
-      await downloadCV();
-  } catch (error) {
-      console.error("Download failed", error);
-  }
-});
-
-async function downloadCV() {
-  return new Promise((resolve, reject) => {
-      setTimeout(() => {
-          console.log("Download complete!");
-          resolve();
-      }, 1000);
-  });
-}
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const cvButton = document.getElementById("cvDownload_nav");
 
   if (cvButton) {
-      cvButton.addEventListener("click", (event) => {
-          event.preventDefault(); 
+    cvButton.addEventListener("click", async (event) => {
+      event.preventDefault();
 
-          const pdfURL = "assets/Usha_cv.pdf";
+      const pdfURL = "assets/Usha_cv.pdf";
 
-          console.log("Opening in new tab...");
-          window.open(pdfURL, "_blank");
-
-          console.log("Starting download...");
-          downloadPDF(pdfURL);
-      });
-  } else {
-      console.error("CV button not found.");
-  }
-
-  
-  function downloadPDF(url) {
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Usha_cv.pdf"; 
-      document.body.appendChild(link); 
-      link.click(); 
-      document.body.removeChild(link); 
+      try {
+        window.open(pdfURL, "_blank");
+        await downloadPDF(pdfURL);
+      } catch (error) {}
+    });
   }
 });
 
+async function downloadPDF(url) {
+  return new Promise((resolve, reject) => {
+    try {
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Usha_cv.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      resolve();
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cvButton = document.getElementById("cvDownload_join");
+
+  if (cvButton) {
+    cvButton.addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      const pdfURL = "assets/Usha_cv.pdf";
+
+      try {
+        window.open(pdfURL, "_blank");
+        await downloadPDF(pdfURL);
+      } catch (error) {}
+    });
+  }
+});
+
+async function downloadPDF(url) {
+  return new Promise((resolve, reject) => {
+    try {
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Usha_cv.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      resolve();
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailLink = document.getElementById("emailLink");
+
+  if (emailLink) {
+    emailLink.addEventListener("click", (event) => {
+      event.preventDefault(); 
+
+      const mailtoLink = "mailto:u8900038@example.com";
+      window.open(mailtoLink, "_blank");
+    });
+  }
+});
 
 
 

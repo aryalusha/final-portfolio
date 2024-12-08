@@ -1,63 +1,3 @@
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const ease = "power4.inOut";
-
-//   document.querySelectorAll("a").forEach((link) => {
-//     link.addEventListener("click", (event) => {
-//       const href = link.getAttribute("href");
-      
-//       if (href && !href.startsWith("#") && href !== window.location.pathname) {
-//         event.preventDefault();
-        
-//         animateTransition().then(() => {
-//           window.location.href = href;  
-//         });
-//       }
-//     });
-//   });
-
-//   revealTransition().then(() => {
-//     gsap.set(".block", { visibility: "hidden" });
-//   });
-
-//   function revealTransition() {
-//     return new Promise((resolve) => {
-//       gsap.set(".block", { scaleY: 1 });
-//       gsap.to(".block", {
-//         scaleY: 0,
-//         duration: 1,
-//         stagger: {
-//           each: 0.1,
-//           from: "start",
-//           grid: [2, 5],
-//           axis: "x",
-//         },
-//         ease: ease,
-//         onComplete: resolve,
-//       });
-//     });
-//   }
-
-//   function animateTransition() {
-//     return new Promise((resolve) => {
-//       gsap.set(".block", { visibility: "visible", scaleY: 0 });
-//       gsap.to(".block", {
-//         scaleY: 1,
-//         duration: 1,
-//         stagger: {
-//           each: 0.1,
-//           from: "start",
-//           grid: [2, 5],
-//           axis: "x",
-//         },
-//         ease: ease,
-//         onComplete: resolve,
-//       });
-//     });
-//   }
-// });
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLeft = document.querySelector("#navLeft");
@@ -70,13 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       navLeft.addEventListener("click", function (event) {
           if (event.target.tagName === "A") {
-              console.log("Closing menu...");
               menuToggle.classList.remove("open");
               navLeft.classList.remove("active");
           }
       });
-  } else {
-      console.error("Menu toggle or navLeft element is missing in the DOM.");
   }
 });
 
@@ -138,14 +75,11 @@ animateFromSide('.leftContainer', 120, 0);
 animateFromSide('.aboutMe', -120, 0);
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("#contentProjects section");
   const sidebarLinks = document.querySelectorAll("#sidebar nav ul li a");
   const nextProjectButton = document.querySelector(".next-project");
   let currentActiveSection = null; 
-
 
   function activateSection(section) {
     sections.forEach(sec => {
@@ -174,12 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       activateSection(section);
     });
 
-
-    section.addEventListener("mouseleave", () => {
-      if (currentActiveSection === section) {
-        console.log("Mouse left, but keeping the current active section.");
-      }
-    });
+    section.addEventListener("mouseleave", () => {});
   });
 
   if (nextProjectButton) {
@@ -190,29 +119,72 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const cvButton = document.getElementById("cvDownload_nav");
+  const loader = document.getElementById("loader");
+
+  if (cvButton) {
+    cvButton.addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      loader.style.display = "flex"; 
+
+      const pdfURL = "assets/Usha_cv.pdf";
+
+      try {
+        window.open(pdfURL, "_blank");
+        await downloadPDF(pdfURL);
+      } catch (error) {
+      } finally {
+        loader.style.display = "none"; 
+      }
+    });
+  }
+});
+
+async function downloadPDF(url) {
+  return new Promise((resolve, reject) => {
+    try {
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Usha_cv.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      resolve();
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  const textGradient = document.querySelector(".textGradient");
 
+  gsap.fromTo(
+    textGradient,
+    { opacity: 0, y: 100 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      onStart: () => {
+        hideLoader();
+      },
+    }
+  );
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function hideLoader() {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+}
 
 
 // for projects
@@ -243,6 +215,52 @@ function setupTabs () {
 document.addEventListener("DOMContentLoaded", () =>{
     setupTabs();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const submitButton = document.getElementById("submitBtn");
+  const fullName = document.getElementById("fullName");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+  const errorMessage = document.getElementById("error-message");
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  submitButton.addEventListener("click", function () {
+    const nameValue = fullName.value.trim();
+    const emailValue = email.value.trim();
+    const messageValue = message.value.trim();
+
+    // Full Name validation
+    if (!nameValue) {
+      errorMessage.innerText = "Full Name is required*";
+      return;
+    }
+
+    // Email validation
+    if (!emailValue) {
+      errorMessage.innerText = "Email is required*";
+      return;
+    }
+
+    if (!isValidEmail(emailValue)) {
+      errorMessage.innerText = "Invalid email address*";
+      return;
+    }
+
+    if (!messageValue) {
+      errorMessage.innerText = "Message cannot be empty.*";
+      return;
+    }
+
+    errorMessage.innerText = "";
+
+    alert("Form submitted successfully!");
+  });
+});
+
 
 
 

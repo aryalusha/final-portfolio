@@ -12,22 +12,7 @@
 </head>
 <body>
 
-    <div class="transition">
-        <div class="transition-row row-1">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-        </div>
-        <div class="transition-row row-2">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-        </div>
-    </div>
+    <div id="loader" class="loader"></div>
 
     <main>
 
@@ -92,10 +77,11 @@
                 </div>
             </div>
             <div  class="form-container"> 
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Submit <span>→</span></button>
+                <input type="text" id="fullName" placeholder="Full Name">
+                <input type="email" id="email" placeholder="Email">
+                <textarea placeholder="Message" id="message"></textarea>
+                <button type="submit" id="submitBtn">Submit <span>→</span></button>
+                <div id="error-message"></div>
                 <p>Will reach out to you about 24 hours in work days</p>
             </div>
         </div>
