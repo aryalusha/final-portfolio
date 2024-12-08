@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { 
       selector: '.mainHead', 
       from: { opacity: 0, y: -20 }, 
-      to: { delay: 2.2, duration: 1 } 
+      to: { delay: 2, duration: 1 } 
     },
     { 
       selector: '.headingText', 
@@ -164,27 +164,32 @@ animation.forEach(({ selector, x, y = '0' }) => {
       gsap.fromTo(
         selector,
         { opacity: 0, x: x, y: y },
-        { opacity: 1, x: 0, y: 0, duration: 1.4 }
+        { opacity: 1, x: 0, y: 0, duration: 1.6 }
       );
     },
     once: true, 
   });
 });
 
-gsap.fromTo('.subContainer', 
-  { opacity: 0, y: 100 },  
-  { 
-    opacity: 1, y: 0,   
-    duration: 1.5, 
-    ease: "power2.out", 
-    scrollTrigger: {
-      trigger: '.whyContainer', 
-      start: 'top 80%',       
-      toggleActions: 'play none none none' 
-    }
-  }
-);
 
+if (window.innerWidth > 768) { 
+  gsap.fromTo(
+    '.subContainer',
+    { opacity: 0, y: 100 },  
+    { 
+      opacity: 1, y: 0,   
+      duration: 1.5, 
+      ease: "power2.out", 
+      scrollTrigger: {
+        trigger: '.whyContainer', 
+        start: 'top 80%',       
+        toggleActions: 'play none none none' 
+      }
+    }
+  );
+} else {
+  gsap.set('.subContainer', { opacity: 1, y: 0 });
+}
 
 
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
