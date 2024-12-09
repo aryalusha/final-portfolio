@@ -2060,6 +2060,14 @@ section {
     line-height: 210%;
 }
 
+#targetAudience ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 210%;
+    color: rgb(190, 191, 195);
+}
+
 #design-process h3{
     margin-bottom: 1.6em;
 }
