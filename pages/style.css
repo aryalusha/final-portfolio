@@ -2020,6 +2020,13 @@ section {
     border-radius: 8px;
 }
 
+#contentProjects .moodboardAccounting{
+    background: url("../assets/moodboard2.jpg") center/cover no-repeat;
+    height: 400px;
+    width: 750px;
+    border-radius: 8px;
+}
+
 #contentProjects .wireframeImg{
     background: url("../assets/wireframeImg.jpg") center/cover no-repeat;
     height: 400px;
