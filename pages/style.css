@@ -290,6 +290,12 @@ button:hover {
     background-color: transparent;
 }
 
+.next-project2{
+    border: none;
+    margin-top: 1em;
+    background-color: transparent;
+}
+
 .tabBox1{
     display: flex;
     flex-direction: column;
@@ -387,19 +393,47 @@ button:hover {
     font-size: 12px;
 }
 
+.teaContainer12 {
+    width: 100%; 
+    height: 200px;
+    overflow: hidden; 
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 1.2em;
+}
+
 .teaImg{
     background-image: url('../assets/teaLaptop12.jpg');
     margin-bottom: 22px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.teaContainer12:hover .teaImg {
+    transform: scale(1.1) rotate(5deg);
+    
+}
+
+.teaContainer12:hover .influencerImg {
+    transform: scale(1.1) rotate(5deg);
+    
+}
+
+.teaContainer12:hover .accountingImg {
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
 .accountingImg{
-    background-image: url('assets_pages/accounting.jpg');
+    background-image: url('../assets/accounting1.jpg');
     margin-bottom: 22px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
 .influencerImg{
-    background-image: url('assets_pages/influencer.jpg');
+    background-image: url('../assets/influencer1.jpg');
     margin-bottom: 22px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
 .scodusImg{
@@ -2070,9 +2104,26 @@ section {
 }
 
 #contentProjects .ideation1{
+    margin-top: 1em;
     background: url("../assets/ideation.jpg") center/cover no-repeat;
+    height: 350px;
+    width: 50vw;
+    border-radius: 8px;
+}
+
+#contentProjects .lowFidelity1{
+    margin-top: 2em;
+    background: url("../assets/lowFidelity1.jpg") center/cover no-repeat;
+    height: 300px;
+    width: 52vw;
+    border-radius: 8px;
+}
+
+#contentProjects .midFidelity1{
+    margin-top: 2em;
+    background: url("../assets/midFidelity1.jpg") center/cover no-repeat;
     height: 400px;
-    width: 600px;
+    width: 52vw;
     border-radius: 8px;
 }
 
