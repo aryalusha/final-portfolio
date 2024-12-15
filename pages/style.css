@@ -471,6 +471,16 @@ h3{
 
 @media (max-width: 767px){
 
+
+    .teaContainer12:hover .teaImg {
+        transform: none; 
+    }
+
+    .teaContainer12 {
+        margin-bottom: 16px;
+        height: 300px;
+    }
+
     .menu-toggle {
         gap: 5px;
         cursor: pointer;
@@ -718,7 +728,8 @@ h3{
     }
 
     .propertyImage{
-        height: 300px;
+        height: 400px;
+        width: 90vw;
     }
 
     .bothWork{
@@ -727,7 +738,26 @@ h3{
 
     .workSpacing{
         margin-bottom: 4em;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
+
+    .teaContainer12{
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 400px;
+    }
+
+    .textWork{
+        width: 90vw;
+        margin-left: 50px;
+    }
+
 
 }
 
@@ -748,6 +778,7 @@ h3{
     h3 {
         font-size: 1em;
     }
+    
 }
 
 
@@ -1233,6 +1264,7 @@ h7{
         width: 96%;
         padding: 30px 0px 0px 20px;
     }
+
     .websiteDesign{
         background: url("../assets/tab-responsive.jpg") center/cover no-repeat;
         width: 98%;
@@ -1303,6 +1335,33 @@ h7{
         margin-bottom: 3.4em;
         align-items: center;
     }
+
+    .workSpacing{
+        margin-bottom: 4em;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .teaContainer12{
+        width: 90vw;
+    }
+
+    .propertyImage{
+        width: 80vw;
+    }
+
+    .bothWork{
+        flex-direction: column;
+    }
+
+    .textWork{
+        width: 90vw;
+        margin-left: 50px;
+    }
+
 
 }
 
@@ -1412,9 +1471,29 @@ h7{
         margin-bottom: 2em;
     }
 
+    .teaContainer12{
+        width: 90vw;
+        height: 500px;
+    }
+
+    .propertyImage{
+        width: 80vw;
+    }
+
+
 }
 
 @media only screen and (max-width: 600px) {
+
+
+    .teaContainer12{
+        width: 90vw;
+        height: 400px;
+    }
+
+    .propertyImage{
+        width: 80vw;
+    }
 
     .nav{
         align-items: center;
@@ -1541,6 +1620,16 @@ h7{
         height: 260px;
         border-radius: 26px;
     }
+
+    .teaContainer12{
+        width: 90vw;
+        height: 300px;
+    }
+
+    .propertyImage{
+        width: 80vw;
+    }
+
 
 }
 
@@ -1754,6 +1843,7 @@ h7{
     }
 
     
+
 }
 
 
@@ -1762,6 +1852,13 @@ h7{
 .background5{
     background: url("../assets/singlePageBg.jpg") center/cover no-repeat;
     height: 840px;
+    margin: 0;
+}
+
+
+.background6{
+    background: url("../assets/singlePageBg.jpg") center/cover no-repeat;
+    height: 900px;
     margin: 0;
 }
 
@@ -1826,6 +1923,21 @@ h7{
 
 .teaLaptop{
     background: url("../assets/laptopTea.png") center/cover no-repeat;
+    contain: fit;
+    height: 510px;
+    width: 560px;
+    margin: 0;
+}
+
+.accLaptop{
+    background: url("../assets/accc.png") center/cover no-repeat;
+    contain: fit;
+    height: 510px;
+    width: 560px;
+    margin: 0;
+}
+.influencerLaptop{
+    background: url("../assets/influencerFinal.png") center/cover no-repeat;
     contain: fit;
     height: 510px;
     width: 560px;
@@ -2076,12 +2188,20 @@ section {
     border-radius: 8px;
 }
 
+#contentProjects .finalAccountDesign{
+    background: url("../assets/accountingProcess.jpg") center/cover no-repeat;
+    height: 600px;
+    width: 750px;
+    border-radius: 8px;
+}
+
 #contentProjects .wireframeImg{
     background: url("../assets/wireframeImg.jpg") center/cover no-repeat;
     height: 400px;
     width: 750px;
     border-radius: 8px;
 }
+
 #contentProjects .finalTeaImg{
     background: url("../assets/finalTeaImg.jpg") center/cover no-repeat;
     height: 400px;
@@ -2167,6 +2287,14 @@ section {
         height: 760px;
     }
 
+    .background6{
+        height: 1200px;
+    }
+
+    .background6{
+        height: 1000px;
+    }
+
     .leftText{
         width: 350px;
         height: auto;
@@ -2193,6 +2321,13 @@ section {
         contain: fit;
         height: 300px;
         width: 300px;
+    }
+
+
+    .SingleHeading .accLaptop{
+        height: 280px;
+        width: 300px;
+        margin-top: 16px;
     }
 
     .SingleHeading .btns{
@@ -2227,7 +2362,18 @@ section {
     #ContentProjects{
         gap: 1.4em;
     }
-    
+
+    #contentProjects .moodboardAccounting{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
+
+    #contentProjects .finalAccountDesign{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
 }
 
 
@@ -2235,6 +2381,11 @@ section {
 
     .background5{
         height: 1200px;
+    }
+
+
+    .background6{
+        height: 1400px;
     }
 
 
@@ -2280,6 +2431,32 @@ section {
         font-size: 14px;
     }
 
+    #contentProjects .finalTeaImg1{
+        height: 400px;
+        width: 80vw;
+    }
+
+    #contentProjects .finalTeaImg{
+        height: 400px;
+        width: 80vw;
+    }
+
+    #contentProjects .ideationImg{
+        height: 200px;
+        width: 80vw;
+    }
+
+    #contentProjects .moodboardImg{
+        height: 200px;
+        width: 80vw;
+    }
+
+    #contentProjects .wireframeImg{
+        height: 200px;
+        width: 80vw;
+    }
+    
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -2328,6 +2505,15 @@ section {
 
     .itemsContainer {
         padding: 40px 40px 60px 40px;
+    }
+    #perspective h3{
+        width: 400px;
+    }
+
+    #contentProjects .finalAccountDesign{
+        height: 200px;
+        width: 80vw;
+        border-radius: 8px;
     }
 
 }
@@ -2426,7 +2612,7 @@ section {
 
 .elementsCard{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns for the first row */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
     padding: 90px 160px 100px 160px;
     justify-items: center;
