@@ -1566,6 +1566,13 @@ h7{
 
 @media only screen and (max-width: 600px) {
 
+    .background1 {
+        background: url("../assets/serviceResponsive.png") center/cover no-repeat;
+        height: 850px;
+        margin: 0;
+        width: 100%;
+    }
+
 
     .teaContainer12{
         width: 90vw;
