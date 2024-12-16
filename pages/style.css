@@ -409,15 +409,65 @@ button:hover {
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
+.teaContainer12:hover .scodusImg {
+    transform: scale(1.1) rotate(5deg);
+}
+
+
+.scodusImg{
+    background-image: url('assets_pages/scodus.jpg');
+    margin-bottom: 22px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
 
 .girlIllustration{
     background-image: url('../assets/girl.jpg');
     margin-bottom: 22px;
 }
 
+.deadpool{
+    background-image: url('../assets/deadpool.jpg');
+    margin-bottom: 22px;
+}
+
 
 .dogIllustration{
     background-image: url('../assets/dog.jpg');
+    margin-bottom: 22px;
+}
+
+.laundry{
+    background-image: url('../assets/laundry.jpg');
+    margin-bottom: 22px;
+}
+
+.poster1{
+    background-image: url('../assets/games.jpg');
+    margin-bottom: 22px;
+}
+
+.cat{
+    background-image: url('../assets/cat.jpg');
+    margin-bottom: 22px;
+}
+
+.finora{
+    background-image: url('../assets/finoraLogo.jpg');
+    margin-bottom: 22px;
+}
+
+.upland{
+    background-image: url('../assets/uplandSew.jpg');
+    margin-bottom: 22px;
+}
+
+.poster2{
+    background-image: url('../assets/srot.jpg');
+    margin-bottom: 22px;
+}
+
+.poster4{
+    background-image: url('../assets/poster4.jpg');
     margin-bottom: 22px;
 }
 
@@ -454,14 +504,19 @@ button:hover {
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
-.scodusImg{
-    background-image: url('assets_pages/scodus.jpg');
-    margin-bottom: 22px;
-}
 
 .propertyImage{
     width: 500px;
     height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+}
+
+.propertyImage2{
+    width: 500px;
+    height: 520px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

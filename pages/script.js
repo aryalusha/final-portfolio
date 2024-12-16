@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showLoader() {
     loader.style.display = "block";
-    submitButton.classList.add("loading"); // Hide button text
+    submitButton.classList.add("loading"); 
   }
 
   function hideLoader() {
