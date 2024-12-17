@@ -286,7 +286,7 @@ button:hover {
 
 .next-project1{
     border: none;
-    margin-top: -50px;
+    margin-top: -20px;
     background-color: transparent;
 }
 
@@ -2048,6 +2048,7 @@ h7{
     width: 100vw;
 }
 
+
 .roleContainer .fa-solid{
     width: 34px;
     height: 34px;
@@ -2283,6 +2284,36 @@ section {
     width: 750px;
     border-radius: 8px;
 }
+#contentProjects .finalAccountDesign0{
+    background: url("../assets/account1.jpg") center/cover no-repeat;
+    height: 600px;
+    width: 750px;
+    border-radius: 8px;
+}
+#contentProjects .finalAccountDesign1{
+    background: url("../assets/accountingProcess1.jpg") center/cover no-repeat;
+    height: 600px;
+    width: 750px;
+    border-radius: 8px;
+}
+#contentProjects .finalAccountDesign2{
+    background: url("../assets/accountingProcess2.jpg") center/cover no-repeat;
+    height: 600px;
+    width: 750px;
+    border-radius: 8px;
+}
+#contentProjects .finalAccountDesign3{
+    background: url("../assets/Restro1.jpg") center/cover no-repeat;
+    height: 600px;
+    width: 750px;
+    border-radius: 8px;
+}
+#contentProjects .finalAccountDesign4{
+    background: url("../assets/Restro2.jpg") center/cover no-repeat;
+    height: 600px;
+    width: 750px;
+    border-radius: 8px;
+}
 
 #contentProjects .ideation1{
     margin-top: 1em;
@@ -2333,6 +2364,7 @@ section {
     height: 400px;
     width: 750px;
     border-radius: 8px;
+    margin-top: 20px;
 }
 
 #contentProjects .midFidelity1{
@@ -2353,7 +2385,14 @@ section {
 
 #contentProjects .influencerDashboard{
     margin-top: 2em;
-    background: url("../assets/influencerDashboard.jpg") center/cover no-repeat;
+    background: url("../assets/influencer2.jpg") center/cover no-repeat;
+    height: 500px;
+    width: 750px;
+    border-radius: 8px;
+}
+#contentProjects .influencer3{
+    margin-top: 2em;
+    background: url("../assets/influencer3.jpg") center/cover no-repeat;
     height: 500px;
     width: 750px;
     border-radius: 8px;
@@ -2516,8 +2555,37 @@ section {
         height: 300px;
         width: 80vw;
     }
+    #contentProjects .influencer3{
+        height: 300px;
+        width: 80vw;
+    }
 
     #contentProjects .finalAccountDesign{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
+    #contentProjects .finalAccountDesign0{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
+    #contentProjects .finalAccountDesign1{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
+    #contentProjects .finalAccountDesign2{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
+    #contentProjects .finalAccountDesign3{
+        height: 400px;
+        width: 80vw;
+        border-radius: 8px;
+    }
+    #contentProjects .finalAccountDesign4{
         height: 400px;
         width: 80vw;
         border-radius: 8px;
